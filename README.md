@@ -1,3 +1,3 @@
 # RingCentral
 
-A description of this package.
+RingCentral Swift SDK
