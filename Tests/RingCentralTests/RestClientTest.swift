@@ -31,6 +31,7 @@ final class RestClientTests: XCTestCase {
             clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
             server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!)
         var urlRequest = rc.newURLRequest("/restapi/oauth/token")
+        urlRequest.method = .post
         urlRequest = try! URLEncodedFormParameterEncoder().encode([
             "grant_type": "password",
             "username": ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
@@ -38,9 +39,12 @@ final class RestClientTests: XCTestCase {
             "password": ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!,
         ], into: urlRequest)
         let dataRequest = rc.session.request(urlRequest)
+        let expectation = self.expectation(description: "testAuthorize")
         dataRequest.responseJSON {response in
             debugPrint(response)
+            expectation.fulfill()
         }
+        waitForExpectations(timeout: 10, handler: nil)
     }
 
     static var allTests = [
