@@ -4,9 +4,6 @@ import Alamofire
 
 final class RestClientTests: XCTestCase {
     func testUpdateSession() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
         let rc = RestClient(clientId: "", clientSecret: "")
         rc.session = Session.default // can update the session
         XCTAssertEqual(rc.session === Session.default, true)
@@ -21,7 +18,7 @@ final class RestClientTests: XCTestCase {
     
     func testNewURLRequest() {
         let rc = RestClient(clientId: "", clientSecret: "")
-        let urlRequest = rc.newURLRequest("/restapi/v1.0/account/~/extension/~")
+        let urlRequest = rc.newURLRequest(.get, "/restapi/v1.0/account/~/extension/~")
         XCTAssertEqual(urlRequest.headers.value(for: "X-User-Agent"), "Unknown/0.0.1 RingCentral-Swift/0.1.0")
     }
     
@@ -30,8 +27,7 @@ final class RestClientTests: XCTestCase {
             clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
             clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
             server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!)
-        var urlRequest = rc.newURLRequest("/restapi/oauth/token")
-        urlRequest.method = .post
+        var urlRequest = rc.newURLRequest(.post, "/restapi/oauth/token")
         urlRequest = try! URLEncodedFormParameterEncoder().encode([
             "grant_type": "password",
             "username": ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,

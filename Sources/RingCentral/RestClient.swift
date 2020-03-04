@@ -27,9 +27,10 @@ public class RestClient {
         self.init(clientId: clientId, clientSecret: clientSecret, server: production ? RestClient.productionServer : RestClient.sandboxServer, appName: appName, appVersion: appVersion)
     }
     
-    public func newURLRequest(_ endpoint: String) -> URLRequest {
+    public func newURLRequest(_ httpMethod: HTTPMethod, _ endpoint: String) -> URLRequest {
         let url = URL(string: self.server)!.appendingPathComponent(endpoint)
         var urlRequest = URLRequest(url: url)
+        urlRequest.method = httpMethod
         urlRequest.headers.add(name: "X-User-Agent", value: "\(self.appName)/\(self.appVersion) RingCentral-Swift/0.1.0")
         if(endpoint.starts(with: "/restapi/oauth/")) {
             urlRequest.headers.add(.authorization(username: self.clientId, password: self.clientSecret))
@@ -38,13 +39,4 @@ public class RestClient {
         }
         return urlRequest
     }
-    
-//    public func request (_ urlRequest: URLRequestConvertible,
-//                        interceptor: RequestInterceptor? = nil) -> DataRequest  {
-//
-//        var urlRequest = try! urlRequest.asURLRequest()
-//        // todo: set dynamic package version
-//
-//        return self.session.request(urlRequest)
-//    }
 }
