@@ -16,80 +16,84 @@ models.forEach(m => {
 })
 
 const normalizeType = f => {
+  let result = ''
   if (f.type === 'integer') {
-    return 'long?'
+    result = 'Int'
   } else if (f.type === 'array') {
-    return `${normalizeType(f.items)}[]`
+    result = `[${normalizeType(f.items)}]`
   } else if (f.type === undefined || f.type === 'object') {
     if (!f.$ref) {
-      return 'object' // anonymous object
+      result = 'AnyObject' // anonymous object
+    } else {
+      result = f.$ref.split('/').slice(-1)[0]
     }
-    return f.$ref.split('/').slice(-1)[0]
   } else if (f.type === 'boolean') {
-    return 'bool?'
+    result = 'Bool'
   } else if (f.type === 'file') {
-    return 'Attachment'
+    result = 'Attachment'
   } else if (f.type === 'string') {
-    return 'string'
+    result = 'String'
   } else {
     throw new Error(`Unknown type ${f.type}`)
   }
+  return result.replace('?', '') + '?'
 }
 
 const normalizeField = f => {
   f.type = normalizeType(f)
-  if (['event', 'delegate', 'ref', 'default', 'operator', 'public', 'params'].includes(f.name)) {
-    f.name = `@${f.name}`
-  }
+  // if (['event', 'delegate', 'ref', 'default', 'operator', 'public', 'params'].includes(f.name)) {
+  //   f.name = `@${f.name}`
+  // }
   return f
 }
 
 const generateField = (m, f) => {
   let p = ''
   if (f.name.includes('-')) {
-    p += `[JsonProperty("${f.name}")]`
-    p += `\n        public ${f.type} ${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())};`
+  //   p += `[JsonProperty("${f.name}")]`
+    p += `public var \`${f.name.replace(/-([a-z])/g, (match, p1) => p1.toUpperCase())}\`: ${f.type}`
   } else if (f.name.includes(':') || f.name.includes('.')) {
-    p += `[JsonProperty("${f.name}")]`
-    p += `\n        public ${f.type} ${f.name.replace(/[:.](\w)/g, '_$1')};`
+  //   p += `[JsonProperty("${f.name}")]`
+    p += `public var \`${f.name.replace(/[:.](\w)/g, '_$1')}\`: ${f.type}`
   } else {
-    p = `public ${f.type} ${f.name};`
+    p += `public var \`${f.name}\`: ${f.type}`
   }
 
-  p = `/// </summary>\n        ${p}`
   if (f.enum) {
-    p = `/// Enum: ${f.enum.join(', ')}\n        ${p}`
+    p = `/// Enum: ${f.enum.join(', ')}\n    ${p}`
   }
   if (f.default) {
-    p = `/// Default: ${f.default}\n        ${p}`
+    p = `/// Default: ${f.default}\n    ${p}`
   }
   if (f.minimum) {
-    p = `/// Minimum: ${f.minimum}\n        ${p}`
+    p = `/// Minimum: ${f.minimum}\n    ${p}`
   }
   if (f.maximum) {
-    p = `/// Maximum: ${f.maximum}\n        ${p}`
+    p = `/// Maximum: ${f.maximum}\n    ${p}`
   }
   if (m.required && m.required.includes(f.name)) {
-    p = `/// Required\n        ${p}`
+    p = `/// Required\n    ${p}`
   }
   if (f.description) {
-    p = `${f.description.trim().split('\n').map(l => `/// ${l}`).join('\n')}\n        ${p}`
+    p = `${f.description.trim().split('\n').map(l => `/// ${l}`).join('\n')}\n    ${p}`
   }
-  p = `/// <summary>\n        ${p}`
   return p
 }
 
 const generateCode = (m, fields) => {
-  let code = `namespace RingCentral
-{${m.description ? '\n    // ' + m.description : ''}
-    public class ${m.name}
-    {
-        ${fields.join('\n\n        ')}
+  const code = `import Foundation
+${m.description ? '\n// ' + m.description : ''}
+public class ${m.name}
+{
+    public init() {
     }
-}`
-  if (code.includes('[JsonProperty(')) {
-    code = 'using Newtonsoft.Json;\n\n' + code
-  }
+
+    ${fields.join('\n\n    ')}
+}
+`
+  // if (code.includes('[JsonProperty(')) {
+  //   code = 'using Newtonsoft.Json;\n\n' + code
+  // }
   return code
 }
 
@@ -100,7 +104,7 @@ models.forEach(m => {
     .map(k => ({ name: k, ...properties[k] }))
     .map(f => normalizeField(f))
     .map(f => generateField(m, f))
-  fs.writeFileSync(path.join(outputDir, `${m.name}.cs`), generateCode(m, fields))
+  fs.writeFileSync(path.join(outputDir, `${m.name}.swift`), generateCode(m, fields))
 })
 
 // generate models for form-data objects
@@ -114,11 +118,11 @@ Object.keys(doc.paths).forEach(p => {
         .map(p => {
           p = normalizeField(p)
           if (p.$ref) {
-            p.type = p.$ref.split('/').slice(-1)[0]
+            p.type = p.$ref.split('/').slice(-1)[0] + '?'
           }
           return generateField({}, p)
         })
-      fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
+      fs.writeFileSync(path.join(outputDir, `${className}.swift`), generateCode({ name: className }, fields))
     }
   })
 })
@@ -135,29 +139,28 @@ Object.keys(doc.paths).forEach(p => {
           p = normalizeField(p)
           return generateField({}, p)
         })
-      fs.writeFileSync(path.join(outputDir, `${className}.cs`), generateCode({ name: className }, fields))
+      fs.writeFileSync(path.join(outputDir, `${className}.swift`), generateCode({ name: className }, fields))
     }
   })
 })
 
 // Generate Attachment
-fs.writeFileSync(path.join(outputDir, 'Attachment.cs'), `namespace RingCentral
+fs.writeFileSync(path.join(outputDir, 'Attachment.swift'), `import Foundation
+
+public class Attachment
 {
-    public class Attachment
-    {
-        /// <summary>
-        /// File name with extension, such as "example.png"
-        /// </summary>
-        public string fileName;
-
-        /// <summary>
-        /// Binary content of the file
-        /// </summary>
-        public byte[] bytes;
-
-        /// <summary>
-        /// Content tyle of the file, such as "image/png"
-        /// </summary>
-        public string contentType;
+    public init(fileName: String, contentType: String, bytes: Data) {
+      self.fileName = fileName
+      self.contentType = contentType
+      self.bytes = bytes
     }
+
+    /// File name with extension, such as "example.png"
+    public var fileName: String
+
+    /// Binary content of the file
+    public var bytes: Data
+
+    /// Content tyle of the file, such as "image/png"
+    public var contentType: String
 }`)

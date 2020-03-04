@@ -1,5 +1,15 @@
 {
+  "license": "MIT",
+  "scripts": {
+    "definitions": "rm -rf ../Sources/RingCentral/Definitions/* && node -r @babel/register definitions.js"
+  },
+  "dependencies": {
+    "change-case": "^4.1.1"
+  },
   "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/register": "^7.8.6",
     "standard": "^14.3.1",
     "yarn-upgrade-all": "^0.5.2"
   }
