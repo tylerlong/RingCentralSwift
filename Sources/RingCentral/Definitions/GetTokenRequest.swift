@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetTokenRequest
+public class GetTokenRequest: Codable
 {
     public init() {
     }

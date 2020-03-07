@@ -18,11 +18,12 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/mxcl/PromiseKit", .upToNextMajor(from: "6.0.0"))
     ],
     targets: [
         .target(
             name: "RingCentral",
-            dependencies: ["Alamofire"]),
+            dependencies: ["Alamofire", "PromiseKit"]),
         .testTarget(
             name: "RingCentralTests",
             dependencies: ["RingCentral"]),

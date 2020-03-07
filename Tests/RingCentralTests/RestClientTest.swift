@@ -1,6 +1,7 @@
 import XCTest
 import RingCentral
 import Alamofire
+import PromiseKit
 
 final class RestClientTests: XCTestCase {
     func testUpdateSession() {
@@ -36,9 +37,31 @@ final class RestClientTests: XCTestCase {
         ], into: urlRequest)
         let dataRequest = rc.session.request(urlRequest)
         let expectation = self.expectation(description: "testAuthorize")
-        dataRequest.responseJSON {response in
+        dataRequest.responseString {response in
             debugPrint(response)
             expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+     func testPromise() {
+        let rc = RestClient(
+            clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
+            clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
+            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!)
+        let getTokenRequest = GetTokenRequest()
+        getTokenRequest.grant_type = "password"
+        getTokenRequest.username = ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!
+        getTokenRequest.extension = ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!
+        getTokenRequest.password = ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
+        let expectation = self.expectation(description: "testPromise")
+        firstly {
+            rc.authorize(getTokenRequest: getTokenRequest)
+        }.done { response in
+            print(response)
+            expectation.fulfill()
+        }.catch { error in
+            debugPrint(error)
         }
         waitForExpectations(timeout: 10, handler: nil)
     }
@@ -47,5 +70,6 @@ final class RestClientTests: XCTestCase {
         ("testUpdateSession", testUpdateSession),
         ("testServer", testServer),
         ("testNewURLRequest", testNewURLRequest),
+        ("testPromise", testPromise),
     ]
 }

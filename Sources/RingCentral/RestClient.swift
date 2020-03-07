@@ -1,5 +1,6 @@
 import Foundation
 import Alamofire
+import PromiseKit
 
 public class RestClient {
     public static let sandboxServer = "https://platform.devtest.ringcentral.com"
@@ -38,5 +39,16 @@ public class RestClient {
             urlRequest.headers.add(.authorization(bearerToken: token!.access_token!))
         }
         return urlRequest
+    }
+    
+    public func authorize(getTokenRequest: GetTokenRequest) -> Promise<String> {
+        return Promise { seal in
+            var urlRequest = newURLRequest(.post, "/restapi/oauth/token")
+            urlRequest = try! URLEncodedFormParameterEncoder().encode(getTokenRequest, into: urlRequest)
+            let dataRequest = self.session.request(urlRequest)
+            dataRequest.responseString {response in
+                seal.resolve(response.value!, nil)
+            }
+        }
     }
 }
