@@ -1,6 +1,6 @@
 import Foundation
 
-public class UnconditionalForwardingInfo
+public class UnconditionalForwardingInfo: Codable
 {
     public init() {
     }

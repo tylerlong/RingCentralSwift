@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipTaskRecurrenceInfo
+public class GlipTaskRecurrenceInfo: Codable
 {
     public init() {
     }

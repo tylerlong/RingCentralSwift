@@ -1,6 +1,6 @@
 import Foundation
 
-public class DelegateInfo
+public class DelegateInfo: Codable
 {
     public init() {
     }

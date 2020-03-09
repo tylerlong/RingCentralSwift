@@ -1,6 +1,6 @@
 import Foundation
 
-public class CompanyActiveCallsResponse
+public class CompanyActiveCallsResponse: Codable
 {
     public init() {
     }

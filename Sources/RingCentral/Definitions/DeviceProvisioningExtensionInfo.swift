@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeviceProvisioningExtensionInfo
+public class DeviceProvisioningExtensionInfo: Codable
 {
     public init() {
     }

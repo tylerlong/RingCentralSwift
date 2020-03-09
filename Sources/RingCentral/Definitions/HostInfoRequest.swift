@@ -1,6 +1,6 @@
 import Foundation
 
-public class HostInfoRequest
+public class HostInfoRequest: Codable
 {
     public init() {
     }

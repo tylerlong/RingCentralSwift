@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetCountryInfoNumberParser
+public class GetCountryInfoNumberParser: Codable
 {
     public init() {
     }

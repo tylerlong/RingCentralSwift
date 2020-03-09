@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeviceUpdatePhoneLinesInfo
+public class DeviceUpdatePhoneLinesInfo: Codable
 {
     public init() {
     }

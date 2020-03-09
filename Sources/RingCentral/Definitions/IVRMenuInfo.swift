@@ -1,6 +1,6 @@
 import Foundation
 
-public class IVRMenuInfo
+public class IVRMenuInfo: Codable
 {
     public init() {
     }

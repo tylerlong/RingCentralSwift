@@ -1,6 +1,6 @@
 import Foundation
 
-public class MessageStoreReport
+public class MessageStoreReport: Codable
 {
     public init() {
     }

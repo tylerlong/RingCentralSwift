@@ -1,7 +1,7 @@
 import Foundation
 
 // Returned if WebHook subscription is blacklisted
-public class NotificationBlacklistedData
+public class NotificationBlacklistedData: Codable
 {
     public init() {
     }

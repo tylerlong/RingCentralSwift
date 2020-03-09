@@ -1,6 +1,6 @@
 import Foundation
 
-public class CountryInfo
+public class CountryInfo: Codable
 {
     public init() {
     }

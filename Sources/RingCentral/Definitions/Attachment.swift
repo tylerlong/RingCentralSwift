@@ -1,6 +1,6 @@
 import Foundation
 
-public class Attachment
+public class Attachment: Codable
 {
     public init(fileName: String, contentType: String, bytes: Data) {
       self.fileName = fileName

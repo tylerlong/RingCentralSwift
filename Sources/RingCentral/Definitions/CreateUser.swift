@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateUser
+public class CreateUser: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeleteMessageParameters
+public class DeleteMessageParameters: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListAutomaticLocationUpdatesUsersParameters
+public class ListAutomaticLocationUpdatesUsersParameters: Codable
 {
     public init() {
     }

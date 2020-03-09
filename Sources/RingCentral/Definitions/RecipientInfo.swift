@@ -1,6 +1,6 @@
 import Foundation
 
-public class RecipientInfo
+public class RecipientInfo: Codable
 {
     public init() {
     }

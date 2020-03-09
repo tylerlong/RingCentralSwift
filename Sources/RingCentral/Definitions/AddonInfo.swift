@@ -1,6 +1,6 @@
 import Foundation
 
-public class AddonInfo
+public class AddonInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionStatusInfo
+public class ExtensionStatusInfo: Codable
 {
     public init() {
     }

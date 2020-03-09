@@ -1,7 +1,7 @@
 import Foundation
 
 // Information on a blocked/allowed phone number
-public class BlockedAllowedPhoneNumberInfo
+public class BlockedAllowedPhoneNumberInfo: Codable
 {
     public init() {
     }

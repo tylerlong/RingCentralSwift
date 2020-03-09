@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipChatsListWithoutNavigation
+public class GlipChatsListWithoutNavigation: Codable
 {
     public init() {
     }

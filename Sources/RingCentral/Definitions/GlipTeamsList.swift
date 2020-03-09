@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipTeamsList
+public class GlipTeamsList: Codable
 {
     public init() {
     }

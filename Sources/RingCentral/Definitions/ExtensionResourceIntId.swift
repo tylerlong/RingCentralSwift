@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionResourceIntId
+public class ExtensionResourceIntId: Codable
 {
     public init() {
     }

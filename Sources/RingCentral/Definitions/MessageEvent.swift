@@ -1,6 +1,6 @@
 import Foundation
 
-public class MessageEvent
+public class MessageEvent: Codable
 {
     public init() {
     }

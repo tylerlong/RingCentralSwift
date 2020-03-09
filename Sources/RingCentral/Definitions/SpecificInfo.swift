@@ -1,6 +1,6 @@
 import Foundation
 
-public class SpecificInfo
+public class SpecificInfo: Codable
 {
     public init() {
     }

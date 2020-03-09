@@ -1,6 +1,6 @@
 import Foundation
 
-public class PresenceNavigationInfoURI
+public class PresenceNavigationInfoURI: Codable
 {
     public init() {
     }

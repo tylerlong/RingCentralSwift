@@ -1,6 +1,6 @@
 import Foundation
 
-public class APSInfo
+public class APSInfo: Codable
 {
     public init() {
     }

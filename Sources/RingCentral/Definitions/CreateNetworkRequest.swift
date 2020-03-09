@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateNetworkRequest
+public class CreateNetworkRequest: Codable
 {
     public init() {
     }

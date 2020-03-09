@@ -1,6 +1,6 @@
 import Foundation
 
-public class LanguageResource
+public class LanguageResource: Codable
 {
     public init() {
     }

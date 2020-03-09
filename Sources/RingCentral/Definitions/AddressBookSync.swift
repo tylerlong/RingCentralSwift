@@ -1,6 +1,6 @@
 import Foundation
 
-public class AddressBookSync
+public class AddressBookSync: Codable
 {
     public init() {
     }

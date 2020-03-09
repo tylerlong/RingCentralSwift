@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetPresenceExtensionInfo
+public class GetPresenceExtensionInfo: Codable
 {
     public init() {
     }

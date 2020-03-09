@@ -1,6 +1,6 @@
 import Foundation
 
-public class PartyInfo
+public class PartyInfo: Codable
 {
     public init() {
     }

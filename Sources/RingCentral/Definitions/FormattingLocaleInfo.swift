@@ -1,7 +1,7 @@
 import Foundation
 
 // Official name of a formatting language
-public class FormattingLocaleInfo
+public class FormattingLocaleInfo: Codable
 {
     public init() {
     }

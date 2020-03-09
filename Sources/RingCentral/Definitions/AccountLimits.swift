@@ -1,6 +1,6 @@
 import Foundation
 
-public class AccountLimits
+public class AccountLimits: Codable
 {
     public init() {
     }

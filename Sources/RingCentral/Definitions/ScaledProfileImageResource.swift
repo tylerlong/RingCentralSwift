@@ -1,6 +1,6 @@
 import Foundation
 
-public class ScaledProfileImageResource
+public class ScaledProfileImageResource: Codable
 {
     public init() {
     }

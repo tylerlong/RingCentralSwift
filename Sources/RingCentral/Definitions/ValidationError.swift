@@ -1,6 +1,6 @@
 import Foundation
 
-public class ValidationError
+public class ValidationError: Codable
 {
     public init() {
     }

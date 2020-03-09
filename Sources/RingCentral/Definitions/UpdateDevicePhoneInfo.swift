@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateDevicePhoneInfo
+public class UpdateDevicePhoneInfo: Codable
 {
     public init() {
     }

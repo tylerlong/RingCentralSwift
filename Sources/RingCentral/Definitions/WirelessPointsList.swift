@@ -1,6 +1,6 @@
 import Foundation
 
-public class WirelessPointsList
+public class WirelessPointsList: Codable
 {
     public init() {
     }

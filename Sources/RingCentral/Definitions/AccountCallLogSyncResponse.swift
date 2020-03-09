@@ -1,6 +1,6 @@
 import Foundation
 
-public class AccountCallLogSyncResponse
+public class AccountCallLogSyncResponse: Codable
 {
     public init() {
     }

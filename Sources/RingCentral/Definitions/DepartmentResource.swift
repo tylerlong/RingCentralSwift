@@ -1,6 +1,6 @@
 import Foundation
 
-public class DepartmentResource
+public class DepartmentResource: Codable
 {
     public init() {
     }

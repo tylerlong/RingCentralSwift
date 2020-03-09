@@ -1,7 +1,7 @@
 import Foundation
 
 // Peer session / party data. Valid in Gone state only
-public class PeerInfo
+public class PeerInfo: Codable
 {
     public init() {
     }

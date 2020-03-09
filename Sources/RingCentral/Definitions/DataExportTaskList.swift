@@ -1,6 +1,6 @@
 import Foundation
 
-public class DataExportTaskList
+public class DataExportTaskList: Codable
 {
     public init() {
     }

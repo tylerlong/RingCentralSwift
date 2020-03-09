@@ -1,7 +1,7 @@
 import Foundation
 
 // Returns the lists of blocked and allowed phone numbers
-public class CallerBlockingSettingsUpdate
+public class CallerBlockingSettingsUpdate: Codable
 {
     public init() {
     }

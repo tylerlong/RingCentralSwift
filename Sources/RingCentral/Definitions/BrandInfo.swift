@@ -1,6 +1,6 @@
 import Foundation
 
-public class BrandInfo
+public class BrandInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class CustomGreetingAnsweringRuleInfoRequest
+public class CustomGreetingAnsweringRuleInfoRequest: Codable
 {
     public init() {
     }

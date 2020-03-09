@@ -1,6 +1,6 @@
 import Foundation
 
-public class MeetingsResource
+public class MeetingsResource: Codable
 {
     public init() {
     }

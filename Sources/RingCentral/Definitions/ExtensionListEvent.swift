@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionListEvent
+public class ExtensionListEvent: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetTimezoneInfoResponse
+public class GetTimezoneInfoResponse: Codable
 {
     public init() {
     }

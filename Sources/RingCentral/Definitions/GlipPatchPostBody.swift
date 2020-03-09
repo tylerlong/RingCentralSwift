@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipPatchPostBody
+public class GlipPatchPostBody: Codable
 {
     public init() {
     }

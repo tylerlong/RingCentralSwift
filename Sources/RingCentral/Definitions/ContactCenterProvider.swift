@@ -1,6 +1,6 @@
 import Foundation
 
-public class ContactCenterProvider
+public class ContactCenterProvider: Codable
 {
     public init() {
     }

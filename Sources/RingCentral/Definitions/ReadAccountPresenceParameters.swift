@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadAccountPresenceParameters
+public class ReadAccountPresenceParameters: Codable
 {
     public init() {
     }

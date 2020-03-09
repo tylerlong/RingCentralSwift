@@ -1,6 +1,6 @@
 import Foundation
 
-public class OriginInfo
+public class OriginInfo: Codable
 {
     public init() {
     }

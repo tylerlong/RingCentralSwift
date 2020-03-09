@@ -1,6 +1,6 @@
 import Foundation
 
-public class ParsePhoneNumberRequest
+public class ParsePhoneNumberRequest: Codable
 {
     public init() {
     }

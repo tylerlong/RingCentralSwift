@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListFaxCoverPagesResponse
+public class ListFaxCoverPagesResponse: Codable
 {
     public init() {
     }

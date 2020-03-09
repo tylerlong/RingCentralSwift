@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipConversationsList
+public class GlipConversationsList: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class MethodResource
+public class MethodResource: Codable
 {
     public init() {
     }

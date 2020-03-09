@@ -1,7 +1,7 @@
 import Foundation
 
 // List of blocked or allowed phone numbers
-public class BlockedAllowedPhoneNumbersList
+public class BlockedAllowedPhoneNumbersList: Codable
 {
     public init() {
     }

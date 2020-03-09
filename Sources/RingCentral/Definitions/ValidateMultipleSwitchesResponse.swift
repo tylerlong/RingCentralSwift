@@ -1,6 +1,6 @@
 import Foundation
 
-public class ValidateMultipleSwitchesResponse
+public class ValidateMultipleSwitchesResponse: Codable
 {
     public init() {
     }

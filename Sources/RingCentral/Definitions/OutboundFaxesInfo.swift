@@ -1,6 +1,6 @@
 import Foundation
 
-public class OutboundFaxesInfo
+public class OutboundFaxesInfo: Codable
 {
     public init() {
     }

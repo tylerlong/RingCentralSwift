@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListContactsParameters
+public class ListContactsParameters: Codable
 {
     public init() {
     }

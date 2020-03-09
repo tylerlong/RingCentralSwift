@@ -1,6 +1,6 @@
 import Foundation
 
-public class TimezoneInfo
+public class TimezoneInfo: Codable
 {
     public init() {
     }

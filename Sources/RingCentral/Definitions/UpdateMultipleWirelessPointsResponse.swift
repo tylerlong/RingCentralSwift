@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateMultipleWirelessPointsResponse
+public class UpdateMultipleWirelessPointsResponse: Codable
 {
     public init() {
     }

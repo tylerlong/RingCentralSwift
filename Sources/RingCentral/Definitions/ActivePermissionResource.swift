@@ -1,6 +1,6 @@
 import Foundation
 
-public class ActivePermissionResource
+public class ActivePermissionResource: Codable
 {
     public init() {
     }

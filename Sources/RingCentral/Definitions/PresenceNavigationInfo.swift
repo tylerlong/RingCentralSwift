@@ -1,6 +1,6 @@
 import Foundation
 
-public class PresenceNavigationInfo
+public class PresenceNavigationInfo: Codable
 {
     public init() {
     }

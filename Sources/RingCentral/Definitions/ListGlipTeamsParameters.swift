@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListGlipTeamsParameters
+public class ListGlipTeamsParameters: Codable
 {
     public init() {
     }

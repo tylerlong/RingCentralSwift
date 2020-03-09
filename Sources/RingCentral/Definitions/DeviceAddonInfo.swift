@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeviceAddonInfo
+public class DeviceAddonInfo: Codable
 {
     public init() {
     }

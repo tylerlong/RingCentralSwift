@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListStandardGreetingsParameters
+public class ListStandardGreetingsParameters: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class SyncInfo
+public class SyncInfo: Codable
 {
     public init() {
     }

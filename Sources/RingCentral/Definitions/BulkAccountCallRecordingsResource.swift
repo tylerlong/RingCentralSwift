@@ -1,6 +1,6 @@
 import Foundation
 
-public class BulkAccountCallRecordingsResource
+public class BulkAccountCallRecordingsResource: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class TaskAttachment
+public class TaskAttachment: Codable
 {
     public init() {
     }

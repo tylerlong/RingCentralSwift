@@ -1,6 +1,6 @@
 import Foundation
 
-public class PhoneNumberInfoIntId
+public class PhoneNumberInfoIntId: Codable
 {
     public init() {
     }

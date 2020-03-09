@@ -1,6 +1,6 @@
 import Foundation
 
-public class PagingOnlyGroupDevices
+public class PagingOnlyGroupDevices: Codable
 {
     public init() {
     }

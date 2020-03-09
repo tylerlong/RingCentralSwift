@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeviceProvisioningNavigationInfoUri
+public class DeviceProvisioningNavigationInfoUri: Codable
 {
     public init() {
     }

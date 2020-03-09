@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListAccountMeetingRecordingsParameters
+public class ListAccountMeetingRecordingsParameters: Codable
 {
     public init() {
     }

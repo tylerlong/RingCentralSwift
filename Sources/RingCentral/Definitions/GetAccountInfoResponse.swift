@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetAccountInfoResponse
+public class GetAccountInfoResponse: Codable
 {
     public init() {
     }

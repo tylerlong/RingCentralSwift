@@ -1,6 +1,6 @@
 import Foundation
 
-public class RecordsCollectionResourceSubscriptionResponse
+public class RecordsCollectionResourceSubscriptionResponse: Codable
 {
     public init() {
     }

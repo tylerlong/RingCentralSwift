@@ -1,6 +1,6 @@
 import Foundation
 
-public class NoteCreatorInfo
+public class NoteCreatorInfo: Codable
 {
     public init() {
     }

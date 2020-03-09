@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetMessageList
+public class GetMessageList: Codable
 {
     public init() {
     }

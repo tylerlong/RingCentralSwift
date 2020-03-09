@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateGlipMember
+public class CreateGlipMember: Codable
 {
     public init() {
     }

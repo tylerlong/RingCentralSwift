@@ -1,6 +1,6 @@
 import Foundation
 
-public class PagerCallerInfoRequest
+public class PagerCallerInfoRequest: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class MeetingServiceInfoRequest
+public class MeetingServiceInfoRequest: Codable
 {
     public init() {
     }

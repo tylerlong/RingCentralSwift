@@ -1,6 +1,6 @@
 import Foundation
 
-public class Photo
+public class Photo: Codable
 {
     public init() {
     }

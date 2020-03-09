@@ -1,6 +1,6 @@
 import Foundation
 
-public class RoleIdResource
+public class RoleIdResource: Codable
 {
     public init() {
     }

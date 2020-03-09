@@ -1,6 +1,6 @@
 import Foundation
 
-public class TransferredExtensionInfo
+public class TransferredExtensionInfo: Codable
 {
     public init() {
     }

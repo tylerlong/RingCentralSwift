@@ -1,6 +1,6 @@
 import Foundation
 
-public class AssignMultipleDevicesAutomaticLocationUpdates
+public class AssignMultipleDevicesAutomaticLocationUpdates: Codable
 {
     public init() {
     }

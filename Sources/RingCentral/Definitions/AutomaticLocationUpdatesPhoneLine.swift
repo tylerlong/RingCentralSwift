@@ -1,6 +1,6 @@
 import Foundation
 
-public class AutomaticLocationUpdatesPhoneLine
+public class AutomaticLocationUpdatesPhoneLine: Codable
 {
     public init() {
     }

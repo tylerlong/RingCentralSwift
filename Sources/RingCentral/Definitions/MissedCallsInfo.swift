@@ -1,6 +1,6 @@
 import Foundation
 
-public class MissedCallsInfo
+public class MissedCallsInfo: Codable
 {
     public init() {
     }

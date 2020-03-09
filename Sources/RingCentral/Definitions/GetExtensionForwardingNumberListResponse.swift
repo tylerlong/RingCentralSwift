@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetExtensionForwardingNumberListResponse
+public class GetExtensionForwardingNumberListResponse: Codable
 {
     public init() {
     }

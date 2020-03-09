@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateIVRPromptRequest
+public class UpdateIVRPromptRequest: Codable
 {
     public init() {
     }

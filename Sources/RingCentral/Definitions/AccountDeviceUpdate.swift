@@ -1,6 +1,6 @@
 import Foundation
 
-public class AccountDeviceUpdate
+public class AccountDeviceUpdate: Codable
 {
     public init() {
     }

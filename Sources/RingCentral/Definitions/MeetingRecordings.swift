@@ -1,6 +1,6 @@
 import Foundation
 
-public class MeetingRecordings
+public class MeetingRecordings: Codable
 {
     public init() {
     }

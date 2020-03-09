@@ -1,6 +1,6 @@
 import Foundation
 
-public class PickupTarget
+public class PickupTarget: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListDirectoryEntriesParameters
+public class ListDirectoryEntriesParameters: Codable
 {
     public init() {
     }

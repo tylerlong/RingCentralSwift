@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReplyWithPattern
+public class ReplyWithPattern: Codable
 {
     public init() {
     }

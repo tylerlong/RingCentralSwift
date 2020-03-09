@@ -1,6 +1,6 @@
 import Foundation
 
-public class EmergencyLocationInfo
+public class EmergencyLocationInfo: Codable
 {
     public init() {
     }

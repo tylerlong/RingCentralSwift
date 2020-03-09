@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipGroupList
+public class GlipGroupList: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeviceResource
+public class DeviceResource: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class WirelessPointValidated
+public class WirelessPointValidated: Codable
 {
     public init() {
     }

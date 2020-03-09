@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListMessagesParameters
+public class ListMessagesParameters: Codable
 {
     public init() {
     }

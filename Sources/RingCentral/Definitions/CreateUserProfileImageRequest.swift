@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateUserProfileImageRequest
+public class CreateUserProfileImageRequest: Codable
 {
     public init() {
     }

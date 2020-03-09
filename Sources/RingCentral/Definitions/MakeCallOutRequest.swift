@@ -1,6 +1,6 @@
 import Foundation
 
-public class MakeCallOutRequest
+public class MakeCallOutRequest: Codable
 {
     public init() {
     }

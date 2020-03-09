@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallLogNavigationInfoURI
+public class CallLogNavigationInfoURI: Codable
 {
     public init() {
     }

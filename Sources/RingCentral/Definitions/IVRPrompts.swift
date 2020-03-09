@@ -1,6 +1,6 @@
 import Foundation
 
-public class IVRPrompts
+public class IVRPrompts: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class SearchViaGet2Parameters
+public class SearchViaGet2Parameters: Codable
 {
     public init() {
     }

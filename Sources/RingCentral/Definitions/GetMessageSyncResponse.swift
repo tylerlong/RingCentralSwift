@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetMessageSyncResponse
+public class GetMessageSyncResponse: Codable
 {
     public init() {
     }

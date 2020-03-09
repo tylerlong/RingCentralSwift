@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipDataExportNavigationInfo
+public class GlipDataExportNavigationInfo: Codable
 {
     public init() {
     }

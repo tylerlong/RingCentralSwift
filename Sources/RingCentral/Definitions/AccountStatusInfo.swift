@@ -1,6 +1,6 @@
 import Foundation
 
-public class AccountStatusInfo
+public class AccountStatusInfo: Codable
 {
     public init() {
     }

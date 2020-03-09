@@ -1,6 +1,6 @@
 import Foundation
 
-public class VoicemailsInfo
+public class VoicemailsInfo: Codable
 {
     public init() {
     }

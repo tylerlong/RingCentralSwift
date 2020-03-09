@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallRecordingCustomGreetingData
+public class CallRecordingCustomGreetingData: Codable
 {
     public init() {
     }

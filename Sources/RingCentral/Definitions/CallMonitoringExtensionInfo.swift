@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallMonitoringExtensionInfo
+public class CallMonitoringExtensionInfo: Codable
 {
     public init() {
     }

@@ -1,7 +1,7 @@
 import Foundation
 
 // Updates either blocked or allowed phone number list with a new phone number.
-public class AddBlockedAllowedPhoneNumber
+public class AddBlockedAllowedPhoneNumber: Codable
 {
     public init() {
     }

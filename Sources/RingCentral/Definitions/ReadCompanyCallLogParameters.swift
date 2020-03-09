@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadCompanyCallLogParameters
+public class ReadCompanyCallLogParameters: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateGlipEveryoneRequest
+public class UpdateGlipEveryoneRequest: Codable
 {
     public init() {
     }

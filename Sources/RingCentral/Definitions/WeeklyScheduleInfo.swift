@@ -1,6 +1,6 @@
 import Foundation
 
-public class WeeklyScheduleInfo
+public class WeeklyScheduleInfo: Codable
 {
     public init() {
     }

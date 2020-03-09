@@ -1,6 +1,6 @@
 import Foundation
 
-public class FaxCoverPageInfo
+public class FaxCoverPageInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserResponse
+public class UserResponse: Codable
 {
     public init() {
     }

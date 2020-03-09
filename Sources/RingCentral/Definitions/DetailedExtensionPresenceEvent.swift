@@ -1,6 +1,6 @@
 import Foundation
 
-public class DetailedExtensionPresenceEvent
+public class DetailedExtensionPresenceEvent: Codable
 {
     public init() {
     }

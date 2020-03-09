@@ -1,6 +1,6 @@
 import Foundation
 
-public class ProvisioningPagingInfo
+public class ProvisioningPagingInfo: Codable
 {
     public init() {
     }

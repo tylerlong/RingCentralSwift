@@ -1,6 +1,6 @@
 import Foundation
 
-public class ShippingResource
+public class ShippingResource: Codable
 {
     public init() {
     }

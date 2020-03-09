@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadExtensionCallQueuePresenceParameters
+public class ReadExtensionCallQueuePresenceParameters: Codable
 {
     public init() {
     }

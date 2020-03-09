@@ -1,6 +1,6 @@
 import Foundation
 
-public class PrivateIpRangeInfo
+public class PrivateIpRangeInfo: Codable
 {
     public init() {
     }

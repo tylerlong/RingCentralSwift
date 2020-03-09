@@ -1,6 +1,6 @@
 import Foundation
 
-public class DepartmentBulkAssignResource
+public class DepartmentBulkAssignResource: Codable
 {
     public init() {
     }

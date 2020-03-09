@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeviceSiteInfo
+public class DeviceSiteInfo: Codable
 {
     public init() {
     }

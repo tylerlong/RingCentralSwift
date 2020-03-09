@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListUserTemplatesParameters
+public class ListUserTemplatesParameters: Codable
 {
     public init() {
     }

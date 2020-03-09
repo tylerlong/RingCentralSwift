@@ -1,6 +1,6 @@
 import Foundation
 
-public class RangesInfo
+public class RangesInfo: Codable
 {
     public init() {
     }

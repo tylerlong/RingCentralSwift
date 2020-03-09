@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListCallMonitoringGroupMembersParameters
+public class ListCallMonitoringGroupMembersParameters: Codable
 {
     public init() {
     }

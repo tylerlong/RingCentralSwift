@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListChatNotesParameters
+public class ListChatNotesParameters: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class PrimaryCQInfo
+public class PrimaryCQInfo: Codable
 {
     public init() {
     }

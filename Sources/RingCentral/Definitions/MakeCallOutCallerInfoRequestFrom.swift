@@ -1,7 +1,7 @@
 import Foundation
 
 // Instance id of the caller. It corresponds to the 1st leg of the CallOut call.
-public class MakeCallOutCallerInfoRequestFrom
+public class MakeCallOutCallerInfoRequestFrom: Codable
 {
     public init() {
     }

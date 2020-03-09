@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetMessageInfoMultiResponse
+public class GetMessageInfoMultiResponse: Codable
 {
     public init() {
     }

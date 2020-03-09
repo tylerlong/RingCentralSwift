@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetExtensionInfoResponse
+public class GetExtensionInfoResponse: Codable
 {
     public init() {
     }

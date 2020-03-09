@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserContactsPagingInfo
+public class UserContactsPagingInfo: Codable
 {
     public init() {
     }

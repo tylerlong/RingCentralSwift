@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReplyParty
+public class ReplyParty: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeviceInfoRequest
+public class DeviceInfoRequest: Codable
 {
     public init() {
     }

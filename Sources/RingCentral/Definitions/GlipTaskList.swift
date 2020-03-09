@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipTaskList
+public class GlipTaskList: Codable
 {
     public init() {
     }

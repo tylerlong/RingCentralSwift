@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetGlipNoteInfo
+public class GetGlipNoteInfo: Codable
 {
     public init() {
     }

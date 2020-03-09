@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListAnsweringRulesParameters
+public class ListAnsweringRulesParameters: Codable
 {
     public init() {
     }

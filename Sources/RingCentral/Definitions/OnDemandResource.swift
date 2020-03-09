@@ -1,6 +1,6 @@
 import Foundation
 
-public class OnDemandResource
+public class OnDemandResource: Codable
 {
     public init() {
     }

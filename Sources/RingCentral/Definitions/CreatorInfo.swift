@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreatorInfo
+public class CreatorInfo: Codable
 {
     public init() {
     }

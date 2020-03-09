@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipGroupsEvent
+public class GlipGroupsEvent: Codable
 {
     public init() {
     }

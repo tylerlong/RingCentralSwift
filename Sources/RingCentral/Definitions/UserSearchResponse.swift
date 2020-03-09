@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserSearchResponse
+public class UserSearchResponse: Codable
 {
     public init() {
     }

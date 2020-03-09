@@ -1,6 +1,6 @@
 import Foundation
 
-public class QueueShortInfoResource
+public class QueueShortInfoResource: Codable
 {
     public init() {
     }

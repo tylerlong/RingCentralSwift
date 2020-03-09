@@ -1,6 +1,6 @@
 import Foundation
 
-public class ScheduleInfo
+public class ScheduleInfo: Codable
 {
     public init() {
     }

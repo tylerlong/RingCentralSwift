@@ -1,6 +1,6 @@
 import Foundation
 
-public class CountryResource
+public class CountryResource: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionInfoEventBody
+public class ExtensionInfoEventBody: Codable
 {
     public init() {
     }

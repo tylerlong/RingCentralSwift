@@ -1,6 +1,6 @@
 import Foundation
 
-public class ContactInfoCreationRequest
+public class ContactInfoCreationRequest: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class CustomFieldUpdateRequest
+public class CustomFieldUpdateRequest: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class LanguageInfo
+public class LanguageInfo: Codable
 {
     public init() {
     }

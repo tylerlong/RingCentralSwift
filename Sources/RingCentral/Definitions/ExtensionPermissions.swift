@@ -1,7 +1,7 @@
 import Foundation
 
 // Extension permissions, corresponding to the Service Web permissions 'Admin' and 'InternationalCalling'
-public class ExtensionPermissions
+public class ExtensionPermissions: Codable
 {
     public init() {
     }

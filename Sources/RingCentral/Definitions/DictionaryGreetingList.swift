@@ -1,6 +1,6 @@
 import Foundation
 
-public class DictionaryGreetingList
+public class DictionaryGreetingList: Codable
 {
     public init() {
     }

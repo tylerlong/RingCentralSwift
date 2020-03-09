@@ -1,6 +1,6 @@
 import Foundation
 
-public class AlertInfo
+public class AlertInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class InstantMessageEvent
+public class InstantMessageEvent: Codable
 {
     public init() {
     }

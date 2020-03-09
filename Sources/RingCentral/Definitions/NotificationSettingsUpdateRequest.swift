@@ -1,6 +1,6 @@
 import Foundation
 
-public class NotificationSettingsUpdateRequest
+public class NotificationSettingsUpdateRequest: Codable
 {
     public init() {
     }

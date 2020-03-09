@@ -1,6 +1,6 @@
 import Foundation
 
-public class SyncUserCallLogParameters
+public class SyncUserCallLogParameters: Codable
 {
     public init() {
     }

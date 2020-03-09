@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallQueueServiceLevelSettings
+public class CallQueueServiceLevelSettings: Codable
 {
     public init() {
     }

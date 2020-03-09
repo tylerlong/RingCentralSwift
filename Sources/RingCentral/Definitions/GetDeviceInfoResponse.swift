@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetDeviceInfoResponse
+public class GetDeviceInfoResponse: Codable
 {
     public init() {
     }

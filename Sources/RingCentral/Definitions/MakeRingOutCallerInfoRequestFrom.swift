@@ -1,6 +1,6 @@
 import Foundation
 
-public class MakeRingOutCallerInfoRequestFrom
+public class MakeRingOutCallerInfoRequestFrom: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class SipRegistrationDeviceInfo
+public class SipRegistrationDeviceInfo: Codable
 {
     public init() {
     }

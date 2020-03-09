@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipMessageAttachmentInfo
+public class GlipMessageAttachmentInfo: Codable
 {
     public init() {
     }

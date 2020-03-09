@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeleteMessageByFilterParameters
+public class DeleteMessageByFilterParameters: Codable
 {
     public init() {
     }

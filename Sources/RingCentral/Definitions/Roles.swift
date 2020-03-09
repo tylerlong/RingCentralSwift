@@ -1,6 +1,6 @@
 import Foundation
 
-public class Roles
+public class Roles: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class RecordingInfo
+public class RecordingInfo: Codable
 {
     public init() {
     }

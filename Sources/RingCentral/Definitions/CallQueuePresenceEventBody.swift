@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallQueuePresenceEventBody
+public class CallQueuePresenceEventBody: Codable
 {
     public init() {
     }

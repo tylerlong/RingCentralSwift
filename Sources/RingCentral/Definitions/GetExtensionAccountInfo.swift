@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetExtensionAccountInfo
+public class GetExtensionAccountInfo: Codable
 {
     public init() {
     }

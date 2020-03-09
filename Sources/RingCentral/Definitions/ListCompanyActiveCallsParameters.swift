@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListCompanyActiveCallsParameters
+public class ListCompanyActiveCallsParameters: Codable
 {
     public init() {
     }

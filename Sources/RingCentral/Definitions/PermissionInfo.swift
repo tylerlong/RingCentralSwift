@@ -1,6 +1,6 @@
 import Foundation
 
-public class PermissionInfo
+public class PermissionInfo: Codable
 {
     public init() {
     }

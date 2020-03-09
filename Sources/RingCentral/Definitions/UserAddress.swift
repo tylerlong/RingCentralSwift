@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserAddress
+public class UserAddress: Codable
 {
     public init() {
     }

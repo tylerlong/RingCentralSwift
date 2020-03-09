@@ -1,6 +1,6 @@
 import Foundation
 
-public class RegionalSettings
+public class RegionalSettings: Codable
 {
     public init() {
     }

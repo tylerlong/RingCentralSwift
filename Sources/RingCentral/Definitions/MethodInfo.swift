@@ -1,6 +1,6 @@
 import Foundation
 
-public class MethodInfo
+public class MethodInfo: Codable
 {
     public init() {
     }

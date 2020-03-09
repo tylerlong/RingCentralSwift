@@ -1,6 +1,6 @@
 import Foundation
 
-public class RingOutStatusInfo
+public class RingOutStatusInfo: Codable
 {
     public init() {
     }

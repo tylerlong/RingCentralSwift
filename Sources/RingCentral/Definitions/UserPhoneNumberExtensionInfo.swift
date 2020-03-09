@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserPhoneNumberExtensionInfo
+public class UserPhoneNumberExtensionInfo: Codable
 {
     public init() {
     }

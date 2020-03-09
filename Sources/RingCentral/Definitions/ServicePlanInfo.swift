@@ -1,6 +1,6 @@
 import Foundation
 
-public class ServicePlanInfo
+public class ServicePlanInfo: Codable
 {
     public init() {
     }

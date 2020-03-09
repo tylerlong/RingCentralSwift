@@ -1,6 +1,6 @@
 import Foundation
 
-public class ConversationInfo
+public class ConversationInfo: Codable
 {
     public init() {
     }

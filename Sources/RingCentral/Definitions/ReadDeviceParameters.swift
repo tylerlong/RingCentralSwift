@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadDeviceParameters
+public class ReadDeviceParameters: Codable
 {
     public init() {
     }

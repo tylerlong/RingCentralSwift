@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetLocationListResponse
+public class GetLocationListResponse: Codable
 {
     public init() {
     }

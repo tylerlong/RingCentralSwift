@@ -1,6 +1,6 @@
 import Foundation
 
-public class AuthProfileResource
+public class AuthProfileResource: Codable
 {
     public init() {
     }

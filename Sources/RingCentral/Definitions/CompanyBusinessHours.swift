@@ -1,6 +1,6 @@
 import Foundation
 
-public class CompanyBusinessHours
+public class CompanyBusinessHours: Codable
 {
     public init() {
     }

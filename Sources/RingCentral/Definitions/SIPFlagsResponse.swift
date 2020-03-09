@@ -1,6 +1,6 @@
 import Foundation
 
-public class SIPFlagsResponse
+public class SIPFlagsResponse: Codable
 {
     public init() {
     }

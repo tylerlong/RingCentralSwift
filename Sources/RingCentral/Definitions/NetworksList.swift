@@ -1,6 +1,6 @@
 import Foundation
 
-public class NetworksList
+public class NetworksList: Codable
 {
     public init() {
     }

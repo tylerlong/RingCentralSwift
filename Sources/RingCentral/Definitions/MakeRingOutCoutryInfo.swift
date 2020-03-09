@@ -1,6 +1,6 @@
 import Foundation
 
-public class MakeRingOutCoutryInfo
+public class MakeRingOutCoutryInfo: Codable
 {
     public init() {
     }

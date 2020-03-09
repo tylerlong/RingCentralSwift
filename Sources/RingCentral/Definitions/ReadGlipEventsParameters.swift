@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadGlipEventsParameters
+public class ReadGlipEventsParameters: Codable
 {
     public init() {
     }

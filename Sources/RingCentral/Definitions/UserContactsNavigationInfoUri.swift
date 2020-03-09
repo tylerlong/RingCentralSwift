@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserContactsNavigationInfoUri
+public class UserContactsNavigationInfoUri: Codable
 {
     public init() {
     }

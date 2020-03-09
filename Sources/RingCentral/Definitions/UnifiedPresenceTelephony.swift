@@ -1,7 +1,7 @@
 import Foundation
 
 // Returned if *BLF* feature is switched on
-public class UnifiedPresenceTelephony
+public class UnifiedPresenceTelephony: Codable
 {
     public init() {
     }

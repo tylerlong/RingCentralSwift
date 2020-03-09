@@ -1,6 +1,6 @@
 import Foundation
 
-public class SwitchesList
+public class SwitchesList: Codable
 {
     public init() {
     }

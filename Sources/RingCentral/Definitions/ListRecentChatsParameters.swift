@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListRecentChatsParameters
+public class ListRecentChatsParameters: Codable
 {
     public init() {
     }

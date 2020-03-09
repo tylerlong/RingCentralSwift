@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateSipRegistrationRequest
+public class CreateSipRegistrationRequest: Codable
 {
     public init() {
     }

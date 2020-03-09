@@ -1,6 +1,6 @@
 import Foundation
 
-public class SenderInfo
+public class SenderInfo: Codable
 {
     public init() {
     }

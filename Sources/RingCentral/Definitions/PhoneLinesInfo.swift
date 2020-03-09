@@ -1,6 +1,6 @@
 import Foundation
 
-public class PhoneLinesInfo
+public class PhoneLinesInfo: Codable
 {
     public init() {
     }

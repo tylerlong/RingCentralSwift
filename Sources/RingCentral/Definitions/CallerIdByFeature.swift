@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallerIdByFeature
+public class CallerIdByFeature: Codable
 {
     public init() {
     }

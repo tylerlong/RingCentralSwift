@@ -1,6 +1,6 @@
 import Foundation
 
-public class ParamsInfo
+public class ParamsInfo: Codable
 {
     public init() {
     }

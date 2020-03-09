@@ -1,6 +1,6 @@
 import Foundation
 
-public class CompanyAnsweringRuleTimeIntervalRequest
+public class CompanyAnsweringRuleTimeIntervalRequest: Codable
 {
     public init() {
     }

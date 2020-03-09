@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadCompanyCallRecordParameters
+public class ReadCompanyCallRecordParameters: Codable
 {
     public init() {
     }

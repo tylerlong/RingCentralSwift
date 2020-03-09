@@ -1,6 +1,6 @@
 import Foundation
 
-public class ArchiveInfo
+public class ArchiveInfo: Codable
 {
     public init() {
     }

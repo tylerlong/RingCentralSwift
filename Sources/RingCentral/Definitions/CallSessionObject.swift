@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallSessionObject
+public class CallSessionObject: Codable
 {
     public init() {
     }

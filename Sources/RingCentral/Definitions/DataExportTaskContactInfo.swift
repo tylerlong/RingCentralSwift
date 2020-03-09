@@ -1,6 +1,6 @@
 import Foundation
 
-public class DataExportTaskContactInfo
+public class DataExportTaskContactInfo: Codable
 {
     public init() {
     }

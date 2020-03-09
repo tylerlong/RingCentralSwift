@@ -1,6 +1,6 @@
 import Foundation
 
-public class CheckUserPermissionParameters
+public class CheckUserPermissionParameters: Codable
 {
     public init() {
     }

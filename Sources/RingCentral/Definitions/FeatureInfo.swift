@@ -1,6 +1,6 @@
 import Foundation
 
-public class FeatureInfo
+public class FeatureInfo: Codable
 {
     public init() {
     }

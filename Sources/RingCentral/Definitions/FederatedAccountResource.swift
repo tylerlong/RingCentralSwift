@@ -1,6 +1,6 @@
 import Foundation
 
-public class FederatedAccountResource
+public class FederatedAccountResource: Codable
 {
     public init() {
     }

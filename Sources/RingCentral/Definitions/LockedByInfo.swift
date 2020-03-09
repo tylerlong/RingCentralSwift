@@ -1,6 +1,6 @@
 import Foundation
 
-public class LockedByInfo
+public class LockedByInfo: Codable
 {
     public init() {
     }

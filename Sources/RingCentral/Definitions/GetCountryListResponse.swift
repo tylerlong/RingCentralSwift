@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetCountryListResponse
+public class GetCountryListResponse: Codable
 {
     public init() {
     }

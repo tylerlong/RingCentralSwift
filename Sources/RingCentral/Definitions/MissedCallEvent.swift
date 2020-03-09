@@ -1,6 +1,6 @@
 import Foundation
 
-public class MissedCallEvent
+public class MissedCallEvent: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ContactAddressInfoDevices
+public class ContactAddressInfoDevices: Codable
 {
     public init() {
     }

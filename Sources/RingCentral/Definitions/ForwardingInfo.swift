@@ -1,6 +1,6 @@
 import Foundation
 
-public class ForwardingInfo
+public class ForwardingInfo: Codable
 {
     public init() {
     }

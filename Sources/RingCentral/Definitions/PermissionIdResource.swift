@@ -1,6 +1,6 @@
 import Foundation
 
-public class PermissionIdResource
+public class PermissionIdResource: Codable
 {
     public init() {
     }

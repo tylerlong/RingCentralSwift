@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListCallQueueMembersParameters
+public class ListCallQueueMembersParameters: Codable
 {
     public init() {
     }

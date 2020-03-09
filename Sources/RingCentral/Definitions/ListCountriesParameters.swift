@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListCountriesParameters
+public class ListCountriesParameters: Codable
 {
     public init() {
     }

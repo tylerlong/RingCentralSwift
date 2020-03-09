@@ -1,6 +1,6 @@
 import Foundation
 
-public class CompanyCallLogSyncInfo
+public class CompanyCallLogSyncInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipCreateTask
+public class GlipCreateTask: Codable
 {
     public init() {
     }
@@ -10,7 +10,7 @@ public class GlipCreateTask
     public var `subject`: String?
 
     /// Required
-    public var `assignees`: [AnyObject]?
+    public var `assignees`: [GlipCreateTaskAssignee]?
 
     /// Default: Simple
     /// Enum: Simple, AllAssignees, Percentage
@@ -34,5 +34,5 @@ public class GlipCreateTask
 
     public var `recurrence`: GlipTaskRecurrenceInfo?
 
-    public var `attachments`: [AnyObject]?
+    public var `attachments`: [GlipCreateTaskAttachment]?
 }

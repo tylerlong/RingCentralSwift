@@ -1,6 +1,6 @@
 import Foundation
 
-public class ScimErrorResponse
+public class ScimErrorResponse: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipPreferencesInfo
+public class GlipPreferencesInfo: Codable
 {
     public init() {
     }

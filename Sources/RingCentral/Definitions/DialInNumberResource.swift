@@ -1,6 +1,6 @@
 import Foundation
 
-public class DialInNumberResource
+public class DialInNumberResource: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class PagingGroupExtensionInfo
+public class PagingGroupExtensionInfo: Codable
 {
     public init() {
     }

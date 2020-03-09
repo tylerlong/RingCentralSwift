@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateSMSMessage
+public class CreateSMSMessage: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class BillingPlanInfo
+public class BillingPlanInfo: Codable
 {
     public init() {
     }

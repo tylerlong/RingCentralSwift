@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListEmergencyLocationsParameters
+public class ListEmergencyLocationsParameters: Codable
 {
     public init() {
     }

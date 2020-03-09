@@ -1,6 +1,6 @@
 import Foundation
 
-public class VoicemailMessageEventBody
+public class VoicemailMessageEventBody: Codable
 {
     public init() {
     }

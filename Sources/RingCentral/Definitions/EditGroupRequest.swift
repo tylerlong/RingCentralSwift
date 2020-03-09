@@ -1,6 +1,6 @@
 import Foundation
 
-public class EditGroupRequest
+public class EditGroupRequest: Codable
 {
     public init() {
     }

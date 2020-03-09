@@ -1,6 +1,6 @@
 import Foundation
 
-public class CompanyAnsweringRuleList
+public class CompanyAnsweringRuleList: Codable
 {
     public init() {
     }

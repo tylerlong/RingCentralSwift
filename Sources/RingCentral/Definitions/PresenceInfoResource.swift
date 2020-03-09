@@ -1,6 +1,6 @@
 import Foundation
 
-public class PresenceInfoResource
+public class PresenceInfoResource: Codable
 {
     public init() {
     }

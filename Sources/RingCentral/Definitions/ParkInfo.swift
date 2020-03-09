@@ -1,6 +1,6 @@
 import Foundation
 
-public class ParkInfo
+public class ParkInfo: Codable
 {
     public init() {
     }

@@ -1,7 +1,7 @@
 import Foundation
 
 // Phone number of the called party. This number corresponds to the 2nd leg of a CallOut call
-public class MakeCallOutCallerInfoRequestTo
+public class MakeCallOutCallerInfoRequestTo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class CompanyAnsweringRuleScheduleInfoRequest
+public class CompanyAnsweringRuleScheduleInfoRequest: Codable
 {
     public init() {
     }

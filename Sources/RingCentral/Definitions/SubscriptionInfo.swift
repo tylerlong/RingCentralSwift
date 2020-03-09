@@ -1,6 +1,6 @@
 import Foundation
 
-public class SubscriptionInfo
+public class SubscriptionInfo: Codable
 {
     public init() {
     }

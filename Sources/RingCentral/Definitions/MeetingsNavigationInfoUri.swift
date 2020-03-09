@@ -1,6 +1,6 @@
 import Foundation
 
-public class MeetingsNavigationInfoUri
+public class MeetingsNavigationInfoUri: Codable
 {
     public init() {
     }

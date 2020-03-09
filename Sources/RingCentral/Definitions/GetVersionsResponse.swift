@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetVersionsResponse
+public class GetVersionsResponse: Codable
 {
     public init() {
     }

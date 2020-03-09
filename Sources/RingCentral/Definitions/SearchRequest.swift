@@ -1,6 +1,6 @@
 import Foundation
 
-public class SearchRequest
+public class SearchRequest: Codable
 {
     public init() {
     }

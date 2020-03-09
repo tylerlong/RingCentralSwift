@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallLogSync
+public class CallLogSync: Codable
 {
     public init() {
     }

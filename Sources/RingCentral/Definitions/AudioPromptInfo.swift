@@ -1,6 +1,6 @@
 import Foundation
 
-public class AudioPromptInfo
+public class AudioPromptInfo: Codable
 {
     public init() {
     }

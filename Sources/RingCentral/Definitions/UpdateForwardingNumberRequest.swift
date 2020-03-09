@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateForwardingNumberRequest
+public class UpdateForwardingNumberRequest: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadCallSessionStatusParameters
+public class ReadCallSessionStatusParameters: Codable
 {
     public init() {
     }

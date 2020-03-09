@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserAnsweringRuleList
+public class UserAnsweringRuleList: Codable
 {
     public init() {
     }

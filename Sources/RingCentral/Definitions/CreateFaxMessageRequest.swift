@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateFaxMessageRequest
+public class CreateFaxMessageRequest: Codable
 {
     public init() {
     }

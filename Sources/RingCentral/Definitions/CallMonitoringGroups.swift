@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallMonitoringGroups
+public class CallMonitoringGroups: Codable
 {
     public init() {
     }

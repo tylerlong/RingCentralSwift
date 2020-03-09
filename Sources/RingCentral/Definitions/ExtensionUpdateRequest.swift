@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionUpdateRequest
+public class ExtensionUpdateRequest: Codable
 {
     public init() {
     }

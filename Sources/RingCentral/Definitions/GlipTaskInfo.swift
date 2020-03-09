@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipTaskInfo
+public class GlipTaskInfo: Codable
 {
     public init() {
     }
@@ -18,7 +18,7 @@ public class GlipTaskInfo
     /// Enum: Task
     public var `type`: String?
 
-    public var `creator`: AnyObject?
+    public var `creator`: GlipTaskInfoCreator?
 
     /// Chat IDs where the task is posted or shared.
     public var `chatIds`: [String]?
@@ -31,7 +31,7 @@ public class GlipTaskInfo
     public var `subject`: String?
 
     /// Task name/subject
-    public var `assignees`: [AnyObject]?
+    public var `assignees`: [GlipTaskInfoAssignee]?
 
     /// Specifies how to determine task completeness
     /// Enum: Simple, AllAssignees, Percentage

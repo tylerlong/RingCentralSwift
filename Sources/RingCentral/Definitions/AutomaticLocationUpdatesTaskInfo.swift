@@ -1,6 +1,6 @@
 import Foundation
 
-public class AutomaticLocationUpdatesTaskInfo
+public class AutomaticLocationUpdatesTaskInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class MessageAttachmentInfo
+public class MessageAttachmentInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallRecordingCustomGreetingLanguage
+public class CallRecordingCustomGreetingLanguage: Codable
 {
     public init() {
     }

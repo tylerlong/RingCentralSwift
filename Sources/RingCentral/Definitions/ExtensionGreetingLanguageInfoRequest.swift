@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionGreetingLanguageInfoRequest
+public class ExtensionGreetingLanguageInfoRequest: Codable
 {
     public init() {
     }

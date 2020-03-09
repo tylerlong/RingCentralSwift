@@ -1,6 +1,6 @@
 import Foundation
 
-public class ContactList
+public class ContactList: Codable
 {
     public init() {
     }

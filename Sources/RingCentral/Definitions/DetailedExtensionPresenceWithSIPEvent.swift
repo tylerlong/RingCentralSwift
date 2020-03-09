@@ -1,6 +1,6 @@
 import Foundation
 
-public class DetailedExtensionPresenceWithSIPEvent
+public class DetailedExtensionPresenceWithSIPEvent: Codable
 {
     public init() {
     }

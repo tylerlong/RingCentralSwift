@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallQueueUpdateDetails
+public class CallQueueUpdateDetails: Codable
 {
     public init() {
     }

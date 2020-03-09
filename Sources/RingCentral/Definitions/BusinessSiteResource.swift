@@ -1,6 +1,6 @@
 import Foundation
 
-public class BusinessSiteResource
+public class BusinessSiteResource: Codable
 {
     public init() {
     }

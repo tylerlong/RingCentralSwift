@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallQueueBulkAssignResource
+public class CallQueueBulkAssignResource: Codable
 {
     public init() {
     }

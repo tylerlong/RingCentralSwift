@@ -1,6 +1,6 @@
 import Foundation
 
-public class SearchDirectoryEntriesRequest
+public class SearchDirectoryEntriesRequest: Codable
 {
     public init() {
     }

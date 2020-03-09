@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipGroupInfo
+public class GlipGroupInfo: Codable
 {
     public init() {
     }

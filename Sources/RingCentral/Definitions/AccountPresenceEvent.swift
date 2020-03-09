@@ -1,6 +1,6 @@
 import Foundation
 
-public class AccountPresenceEvent
+public class AccountPresenceEvent: Codable
 {
     public init() {
     }

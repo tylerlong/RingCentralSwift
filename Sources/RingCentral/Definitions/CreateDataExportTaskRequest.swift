@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateDataExportTaskRequest
+public class CreateDataExportTaskRequest: Codable
 {
     public init() {
     }

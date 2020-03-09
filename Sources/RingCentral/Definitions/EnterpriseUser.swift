@@ -1,6 +1,6 @@
 import Foundation
 
-public class EnterpriseUser
+public class EnterpriseUser: Codable
 {
     public init() {
     }

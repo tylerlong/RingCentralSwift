@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallersInfoRequest
+public class CallersInfoRequest: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateCustomUserGreetingRequest
+public class CreateCustomUserGreetingRequest: Codable
 {
     public init() {
     }

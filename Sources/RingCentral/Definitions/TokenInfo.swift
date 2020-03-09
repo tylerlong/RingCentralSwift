@@ -1,6 +1,6 @@
 import Foundation
 
-public class TokenInfo
+public class TokenInfo: Codable
 {
     public init() {
     }

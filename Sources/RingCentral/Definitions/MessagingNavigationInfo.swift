@@ -1,6 +1,6 @@
 import Foundation
 
-public class MessagingNavigationInfo
+public class MessagingNavigationInfo: Codable
 {
     public init() {
     }

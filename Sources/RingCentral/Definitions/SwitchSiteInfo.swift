@@ -1,6 +1,6 @@
 import Foundation
 
-public class SwitchSiteInfo
+public class SwitchSiteInfo: Codable
 {
     public init() {
     }

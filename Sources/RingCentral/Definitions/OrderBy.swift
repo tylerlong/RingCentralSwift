@@ -1,6 +1,6 @@
 import Foundation
 
-public class OrderBy
+public class OrderBy: Codable
 {
     public init() {
     }

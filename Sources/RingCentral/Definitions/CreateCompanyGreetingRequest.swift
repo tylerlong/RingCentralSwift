@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateCompanyGreetingRequest
+public class CreateCompanyGreetingRequest: Codable
 {
     public init() {
     }

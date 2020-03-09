@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateMultipleWirelessPointsRequest
+public class CreateMultipleWirelessPointsRequest: Codable
 {
     public init() {
     }

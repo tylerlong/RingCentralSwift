@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipEventsInfo
+public class GlipEventsInfo: Codable
 {
     public init() {
     }

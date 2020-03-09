@@ -1,6 +1,6 @@
 import Foundation
 
-public class TaskResultRecord
+public class TaskResultRecord: Codable
 {
     public init() {
     }

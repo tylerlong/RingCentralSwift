@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallMonitoringBulkAssign
+public class CallMonitoringBulkAssign: Codable
 {
     public init() {
     }

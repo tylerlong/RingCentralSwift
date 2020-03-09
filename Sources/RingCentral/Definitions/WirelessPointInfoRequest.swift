@@ -1,6 +1,6 @@
 import Foundation
 
-public class WirelessPointInfoRequest
+public class WirelessPointInfoRequest: Codable
 {
     public init() {
     }

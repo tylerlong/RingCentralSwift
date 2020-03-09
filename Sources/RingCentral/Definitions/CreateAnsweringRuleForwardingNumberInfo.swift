@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateAnsweringRuleForwardingNumberInfo
+public class CreateAnsweringRuleForwardingNumberInfo: Codable
 {
     public init() {
     }

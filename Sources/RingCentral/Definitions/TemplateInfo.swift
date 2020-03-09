@@ -1,6 +1,6 @@
 import Foundation
 
-public class TemplateInfo
+public class TemplateInfo: Codable
 {
     public init() {
     }

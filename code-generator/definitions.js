@@ -22,11 +22,7 @@ const normalizeType = f => {
   } else if (f.type === 'array') {
     result = `[${normalizeType(f.items)}]`
   } else if (f.type === undefined || f.type === 'object') {
-    if (!f.$ref) {
-      result = 'AnyObject' // anonymous object
-    } else {
-      result = f.$ref.split('/').slice(-1)[0]
-    }
+    result = f.$ref.split('/').slice(-1)[0]
   } else if (f.type === 'boolean') {
     result = 'Bool'
   } else if (f.type === 'file') {
@@ -83,7 +79,7 @@ const generateField = (m, f) => {
 const generateCode = (m, fields) => {
   const code = `import Foundation
 ${m.description ? '\n// ' + m.description : ''}
-public class ${m.name}
+public class ${m.name}: Codable
 {
     public init() {
     }
@@ -147,7 +143,7 @@ Object.keys(doc.paths).forEach(p => {
 // Generate Attachment
 fs.writeFileSync(path.join(outputDir, 'Attachment.swift'), `import Foundation
 
-public class Attachment
+public class Attachment: Codable
 {
     public init(fileName: String, contentType: String, bytes: Data) {
       self.fileName = fileName

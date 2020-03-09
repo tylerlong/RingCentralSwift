@@ -1,6 +1,6 @@
 import Foundation
 
-public class DepartmentInfo
+public class DepartmentInfo: Codable
 {
     public init() {
     }

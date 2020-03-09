@@ -1,6 +1,6 @@
 import Foundation
 
-public class MessageSenderInfo
+public class MessageSenderInfo: Codable
 {
     public init() {
     }

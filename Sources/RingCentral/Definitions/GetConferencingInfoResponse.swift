@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetConferencingInfoResponse
+public class GetConferencingInfoResponse: Codable
 {
     public init() {
     }

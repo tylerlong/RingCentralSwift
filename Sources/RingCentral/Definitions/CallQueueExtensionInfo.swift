@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallQueueExtensionInfo
+public class CallQueueExtensionInfo: Codable
 {
     public init() {
     }

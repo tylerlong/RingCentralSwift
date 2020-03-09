@@ -1,6 +1,6 @@
 import Foundation
 
-public class AccountResource
+public class AccountResource: Codable
 {
     public init() {
     }

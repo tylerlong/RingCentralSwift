@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReferenceInfo
+public class ReferenceInfo: Codable
 {
     public init() {
     }

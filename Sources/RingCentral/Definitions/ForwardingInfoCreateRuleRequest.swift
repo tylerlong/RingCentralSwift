@@ -1,6 +1,6 @@
 import Foundation
 
-public class ForwardingInfoCreateRuleRequest
+public class ForwardingInfoCreateRuleRequest: Codable
 {
     public init() {
     }

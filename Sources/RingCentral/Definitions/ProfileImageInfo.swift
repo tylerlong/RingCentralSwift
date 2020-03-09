@@ -1,6 +1,6 @@
 import Foundation
 
-public class ProfileImageInfo
+public class ProfileImageInfo: Codable
 {
     public init() {
     }

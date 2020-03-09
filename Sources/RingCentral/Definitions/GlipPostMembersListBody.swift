@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipPostMembersListBody
+public class GlipPostMembersListBody: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ForwardTarget
+public class ForwardTarget: Codable
 {
     public init() {
     }

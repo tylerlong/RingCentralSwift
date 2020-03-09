@@ -1,6 +1,6 @@
 import Foundation
 
-public class SIPInfoResponse
+public class SIPInfoResponse: Codable
 {
     public init() {
     }

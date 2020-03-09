@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateAnsweringRuleRequest
+public class UpdateAnsweringRuleRequest: Codable
 {
     public init() {
     }

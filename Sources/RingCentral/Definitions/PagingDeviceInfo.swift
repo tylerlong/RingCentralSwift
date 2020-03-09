@@ -1,6 +1,6 @@
 import Foundation
 
-public class PagingDeviceInfo
+public class PagingDeviceInfo: Codable
 {
     public init() {
     }

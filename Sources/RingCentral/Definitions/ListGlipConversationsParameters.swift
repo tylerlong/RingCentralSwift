@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListGlipConversationsParameters
+public class ListGlipConversationsParameters: Codable
 {
     public init() {
     }

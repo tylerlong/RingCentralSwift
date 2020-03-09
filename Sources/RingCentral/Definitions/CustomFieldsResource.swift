@@ -1,6 +1,6 @@
 import Foundation
 
-public class CustomFieldsResource
+public class CustomFieldsResource: Codable
 {
     public init() {
     }

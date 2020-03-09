@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListForwardingNumbersParameters
+public class ListForwardingNumbersParameters: Codable
 {
     public init() {
     }

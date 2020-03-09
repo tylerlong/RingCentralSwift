@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadMessageContentParameters
+public class ReadMessageContentParameters: Codable
 {
     public init() {
     }

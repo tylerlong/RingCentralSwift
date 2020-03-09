@@ -1,6 +1,6 @@
 import Foundation
 
-public class Supported
+public class Supported: Codable
 {
     public init() {
     }

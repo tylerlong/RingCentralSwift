@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateSwitchInfo
+public class CreateSwitchInfo: Codable
 {
     public init() {
     }

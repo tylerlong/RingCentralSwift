@@ -1,6 +1,6 @@
 import Foundation
 
-public class PartyUpdateRequest
+public class PartyUpdateRequest: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class TransferTarget
+public class TransferTarget: Codable
 {
     public init() {
     }

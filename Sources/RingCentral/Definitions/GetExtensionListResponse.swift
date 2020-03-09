@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetExtensionListResponse
+public class GetExtensionListResponse: Codable
 {
     public init() {
     }

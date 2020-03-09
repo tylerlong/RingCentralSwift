@@ -1,6 +1,6 @@
 import Foundation
 
-public class BulkTaskInfo
+public class BulkTaskInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionFavoritesEventBody
+public class ExtensionFavoritesEventBody: Codable
 {
     public init() {
     }

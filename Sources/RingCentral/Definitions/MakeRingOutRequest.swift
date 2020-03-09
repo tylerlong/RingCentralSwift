@@ -1,6 +1,6 @@
 import Foundation
 
-public class MakeRingOutRequest
+public class MakeRingOutRequest: Codable
 {
     public init() {
     }

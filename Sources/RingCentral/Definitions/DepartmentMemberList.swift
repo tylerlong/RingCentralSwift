@@ -1,6 +1,6 @@
 import Foundation
 
-public class DepartmentMemberList
+public class DepartmentMemberList: Codable
 {
     public init() {
     }

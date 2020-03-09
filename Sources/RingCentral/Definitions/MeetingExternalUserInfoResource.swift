@@ -1,6 +1,6 @@
 import Foundation
 
-public class MeetingExternalUserInfoResource
+public class MeetingExternalUserInfoResource: Codable
 {
     public init() {
     }

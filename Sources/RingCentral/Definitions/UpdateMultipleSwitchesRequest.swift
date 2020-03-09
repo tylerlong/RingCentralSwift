@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateMultipleSwitchesRequest
+public class UpdateMultipleSwitchesRequest: Codable
 {
     public init() {
     }

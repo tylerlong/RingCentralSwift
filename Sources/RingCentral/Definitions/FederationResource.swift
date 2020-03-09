@@ -1,6 +1,6 @@
 import Foundation
 
-public class FederationResource
+public class FederationResource: Codable
 {
     public init() {
     }

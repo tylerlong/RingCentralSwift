@@ -1,6 +1,6 @@
 import Foundation
 
-public class IncomingCallEvent
+public class IncomingCallEvent: Codable
 {
     public init() {
     }

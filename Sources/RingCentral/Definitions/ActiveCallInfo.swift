@@ -1,6 +1,6 @@
 import Foundation
 
-public class ActiveCallInfo
+public class ActiveCallInfo: Codable
 {
     public init() {
     }

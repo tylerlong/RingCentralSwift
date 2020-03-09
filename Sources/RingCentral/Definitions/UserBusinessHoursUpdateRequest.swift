@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserBusinessHoursUpdateRequest
+public class UserBusinessHoursUpdateRequest: Codable
 {
     public init() {
     }

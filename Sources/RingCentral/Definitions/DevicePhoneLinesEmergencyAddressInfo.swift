@@ -1,6 +1,6 @@
 import Foundation
 
-public class DevicePhoneLinesEmergencyAddressInfo
+public class DevicePhoneLinesEmergencyAddressInfo: Codable
 {
     public init() {
     }

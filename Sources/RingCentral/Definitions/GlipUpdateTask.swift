@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipUpdateTask
+public class GlipUpdateTask: Codable
 {
     public init() {
     }
@@ -8,7 +8,7 @@ public class GlipUpdateTask
     /// Task name/subject. Max allowed length is 250 characters.
     public var `subject`: String?
 
-    public var `assignees`: [AnyObject]?
+    public var `assignees`: [GlipUpdateTaskAssignee]?
 
     /// Enum: Simple, AllAssignees, Percentage
     public var `completenessCondition`: String?
@@ -30,5 +30,5 @@ public class GlipUpdateTask
 
     public var `recurrence`: GlipTaskRecurrenceInfo?
 
-    public var `attachments`: [AnyObject]?
+    public var `attachments`: [GlipUpdateTaskAttachment]?
 }

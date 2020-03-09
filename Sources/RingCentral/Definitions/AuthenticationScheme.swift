@@ -1,6 +1,6 @@
 import Foundation
 
-public class AuthenticationScheme
+public class AuthenticationScheme: Codable
 {
     public init() {
     }

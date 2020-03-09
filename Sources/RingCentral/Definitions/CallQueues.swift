@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallQueues
+public class CallQueues: Codable
 {
     public init() {
     }

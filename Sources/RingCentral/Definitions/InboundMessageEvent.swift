@@ -1,6 +1,6 @@
 import Foundation
 
-public class InboundMessageEvent
+public class InboundMessageEvent: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class InboundTextsInfo
+public class InboundTextsInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListBlockedAllowedNumbersParameters
+public class ListBlockedAllowedNumbersParameters: Codable
 {
     public init() {
     }

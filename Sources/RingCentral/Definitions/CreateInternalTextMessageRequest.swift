@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateInternalTextMessageRequest
+public class CreateInternalTextMessageRequest: Codable
 {
     public init() {
     }

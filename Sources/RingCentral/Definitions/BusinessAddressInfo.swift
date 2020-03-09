@@ -1,6 +1,6 @@
 import Foundation
 
-public class BusinessAddressInfo
+public class BusinessAddressInfo: Codable
 {
     public init() {
     }

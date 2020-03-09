@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateWirelessPoint
+public class CreateWirelessPoint: Codable
 {
     public init() {
     }

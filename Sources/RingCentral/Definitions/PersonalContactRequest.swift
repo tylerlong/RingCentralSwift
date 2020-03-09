@@ -1,6 +1,6 @@
 import Foundation
 
-public class PersonalContactRequest
+public class PersonalContactRequest: Codable
 {
     public init() {
     }

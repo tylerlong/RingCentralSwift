@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateSubscriptionParameters
+public class UpdateSubscriptionParameters: Codable
 {
     public init() {
     }

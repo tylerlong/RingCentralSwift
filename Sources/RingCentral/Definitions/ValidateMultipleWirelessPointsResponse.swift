@@ -1,6 +1,6 @@
 import Foundation
 
-public class ValidateMultipleWirelessPointsResponse
+public class ValidateMultipleWirelessPointsResponse: Codable
 {
     public init() {
     }

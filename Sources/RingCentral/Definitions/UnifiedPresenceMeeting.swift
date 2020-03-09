@@ -1,7 +1,7 @@
 import Foundation
 
 // Returned if *Meetings* feature is switched on
-public class UnifiedPresenceMeeting
+public class UnifiedPresenceMeeting: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserPatch
+public class UserPatch: Codable
 {
     public init() {
     }

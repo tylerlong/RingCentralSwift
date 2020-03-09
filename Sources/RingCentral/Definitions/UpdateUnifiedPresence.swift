@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateUnifiedPresence
+public class UpdateUnifiedPresence: Codable
 {
     public init() {
     }

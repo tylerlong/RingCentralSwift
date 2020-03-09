@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetUserBusinessHoursResponse
+public class GetUserBusinessHoursResponse: Codable
 {
     public init() {
     }

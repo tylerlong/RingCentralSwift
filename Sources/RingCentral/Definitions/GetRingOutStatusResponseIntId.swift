@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetRingOutStatusResponseIntId
+public class GetRingOutStatusResponseIntId: Codable
 {
     public init() {
     }

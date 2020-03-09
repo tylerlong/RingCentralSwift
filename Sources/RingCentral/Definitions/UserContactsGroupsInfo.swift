@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserContactsGroupsInfo
+public class UserContactsGroupsInfo: Codable
 {
     public init() {
     }

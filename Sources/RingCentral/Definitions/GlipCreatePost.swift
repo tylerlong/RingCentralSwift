@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipCreatePost
+public class GlipCreatePost: Codable
 {
     public init() {
     }

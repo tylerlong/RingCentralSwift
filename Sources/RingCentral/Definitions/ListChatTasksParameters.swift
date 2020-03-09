@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListChatTasksParameters
+public class ListChatTasksParameters: Codable
 {
     public init() {
     }

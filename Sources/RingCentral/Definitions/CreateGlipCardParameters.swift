@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateGlipCardParameters
+public class CreateGlipCardParameters: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipCompleteTask
+public class GlipCompleteTask: Codable
 {
     public init() {
     }
@@ -9,7 +9,7 @@ public class GlipCompleteTask
     /// Enum: Incomplete, Complete
     public var `status`: String?
 
-    public var `assignees`: [AnyObject]?
+    public var `assignees`: [GlipCompleteTaskAssignee]?
 
     /// Current completeness percentage of a task with the 'Percentage' completeness condition. 'Mandatory' if `completenessCondition` is set to `Percentage`, otherwise 'Optional'
     /// Maximum: 100

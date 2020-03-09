@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadGlipPostsParameters
+public class ReadGlipPostsParameters: Codable
 {
     public init() {
     }

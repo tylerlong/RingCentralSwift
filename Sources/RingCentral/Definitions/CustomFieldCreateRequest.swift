@@ -1,6 +1,6 @@
 import Foundation
 
-public class CustomFieldCreateRequest
+public class CustomFieldCreateRequest: Codable
 {
     public init() {
     }

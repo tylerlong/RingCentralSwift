@@ -1,6 +1,6 @@
 import Foundation
 
-public class SuperviseCallSessionRequest
+public class SuperviseCallSessionRequest: Codable
 {
     public init() {
     }

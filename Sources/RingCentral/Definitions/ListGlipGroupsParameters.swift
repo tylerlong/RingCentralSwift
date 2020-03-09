@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListGlipGroupsParameters
+public class ListGlipGroupsParameters: Codable
 {
     public init() {
     }

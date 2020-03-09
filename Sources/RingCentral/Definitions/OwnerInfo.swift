@@ -1,7 +1,7 @@
 import Foundation
 
 // Deprecated. Information on call owner
-public class OwnerInfo
+public class OwnerInfo: Codable
 {
     public init() {
     }

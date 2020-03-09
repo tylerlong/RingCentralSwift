@@ -1,6 +1,6 @@
 import Foundation
 
-public class VersionInfo
+public class VersionInfo: Codable
 {
     public init() {
     }

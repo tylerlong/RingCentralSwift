@@ -1,6 +1,6 @@
 import Foundation
 
-public class PresencePagingInfo
+public class PresencePagingInfo: Codable
 {
     public init() {
     }

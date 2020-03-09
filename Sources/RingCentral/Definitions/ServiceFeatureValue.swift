@@ -1,6 +1,6 @@
 import Foundation
 
-public class ServiceFeatureValue
+public class ServiceFeatureValue: Codable
 {
     public init() {
     }

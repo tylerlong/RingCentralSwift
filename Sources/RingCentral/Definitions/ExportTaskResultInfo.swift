@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExportTaskResultInfo
+public class ExportTaskResultInfo: Codable
 {
     public init() {
     }

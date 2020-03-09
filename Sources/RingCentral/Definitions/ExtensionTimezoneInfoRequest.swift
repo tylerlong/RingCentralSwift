@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionTimezoneInfoRequest
+public class ExtensionTimezoneInfoRequest: Codable
 {
     public init() {
     }

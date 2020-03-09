@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionDeviceResponse
+public class ExtensionDeviceResponse: Codable
 {
     public init() {
     }

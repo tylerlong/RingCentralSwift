@@ -1,6 +1,6 @@
 import Foundation
 
-public class PersonalContactResource
+public class PersonalContactResource: Codable
 {
     public init() {
     }

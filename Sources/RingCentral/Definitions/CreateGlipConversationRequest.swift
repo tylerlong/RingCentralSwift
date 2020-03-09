@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateGlipConversationRequest
+public class CreateGlipConversationRequest: Codable
 {
     public init() {
     }

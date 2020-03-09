@@ -1,6 +1,6 @@
 import Foundation
 
-public class MessageBody
+public class MessageBody: Codable
 {
     public init() {
     }

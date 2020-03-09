@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateConferencingInfoRequest
+public class UpdateConferencingInfoRequest: Codable
 {
     public init() {
     }

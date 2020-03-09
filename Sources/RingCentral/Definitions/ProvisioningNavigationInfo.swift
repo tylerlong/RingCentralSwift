@@ -1,6 +1,6 @@
 import Foundation
 
-public class ProvisioningNavigationInfo
+public class ProvisioningNavigationInfo: Codable
 {
     public init() {
     }

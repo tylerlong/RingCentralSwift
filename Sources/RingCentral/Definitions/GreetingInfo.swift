@@ -1,6 +1,6 @@
 import Foundation
 
-public class GreetingInfo
+public class GreetingInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateForwardingNumberDeviceInfo
+public class CreateForwardingNumberDeviceInfo: Codable
 {
     public init() {
     }

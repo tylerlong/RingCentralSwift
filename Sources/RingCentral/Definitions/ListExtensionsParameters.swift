@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListExtensionsParameters
+public class ListExtensionsParameters: Codable
 {
     public init() {
     }

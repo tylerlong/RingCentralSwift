@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListExtensionPhoneNumbersParameters
+public class ListExtensionPhoneNumbersParameters: Codable
 {
     public init() {
     }

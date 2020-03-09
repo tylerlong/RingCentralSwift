@@ -1,6 +1,6 @@
 import Foundation
 
-public class ServiceInfo
+public class ServiceInfo: Codable
 {
     public init() {
     }

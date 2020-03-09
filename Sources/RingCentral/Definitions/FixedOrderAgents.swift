@@ -1,6 +1,6 @@
 import Foundation
 
-public class FixedOrderAgents
+public class FixedOrderAgents: Codable
 {
     public init() {
     }

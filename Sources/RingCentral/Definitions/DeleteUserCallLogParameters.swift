@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeleteUserCallLogParameters
+public class DeleteUserCallLogParameters: Codable
 {
     public init() {
     }

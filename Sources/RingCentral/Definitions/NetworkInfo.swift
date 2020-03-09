@@ -1,6 +1,6 @@
 import Foundation
 
-public class NetworkInfo
+public class NetworkInfo: Codable
 {
     public init() {
     }

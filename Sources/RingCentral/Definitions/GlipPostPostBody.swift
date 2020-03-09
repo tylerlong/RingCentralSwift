@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipPostPostBody
+public class GlipPostPostBody: Codable
 {
     public init() {
     }
@@ -10,5 +10,5 @@ public class GlipPostPostBody
     public var `text`: String?
 
     /// Identifier(s) of attachments.
-    public var `attachments`: [AnyObject]?
+    public var `attachments`: [GlipPostPostBodyAttachment]?
 }

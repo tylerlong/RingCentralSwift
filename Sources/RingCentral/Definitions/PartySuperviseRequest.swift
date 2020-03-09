@@ -1,6 +1,6 @@
 import Foundation
 
-public class PartySuperviseRequest
+public class PartySuperviseRequest: Codable
 {
     public init() {
     }

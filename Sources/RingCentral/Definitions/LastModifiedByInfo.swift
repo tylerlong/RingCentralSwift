@@ -1,6 +1,6 @@
 import Foundation
 
-public class LastModifiedByInfo
+public class LastModifiedByInfo: Codable
 {
     public init() {
     }

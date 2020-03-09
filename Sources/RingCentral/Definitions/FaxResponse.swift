@@ -1,6 +1,6 @@
 import Foundation
 
-public class FaxResponse
+public class FaxResponse: Codable
 {
     public init() {
     }

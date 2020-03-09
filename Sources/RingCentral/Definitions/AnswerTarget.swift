@@ -1,6 +1,6 @@
 import Foundation
 
-public class AnswerTarget
+public class AnswerTarget: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ActiveCallInfoWithoutSIP
+public class ActiveCallInfoWithoutSIP: Codable
 {
     public init() {
     }

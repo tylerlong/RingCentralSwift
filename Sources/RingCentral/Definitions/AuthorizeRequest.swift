@@ -1,6 +1,6 @@
 import Foundation
 
-public class AuthorizeRequest
+public class AuthorizeRequest: Codable
 {
     public init() {
     }

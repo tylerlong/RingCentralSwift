@@ -1,6 +1,6 @@
 import Foundation
 
-public class ModifyAccountBusinessAddressRequest
+public class ModifyAccountBusinessAddressRequest: Codable
 {
     public init() {
     }

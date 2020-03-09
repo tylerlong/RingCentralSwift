@@ -1,6 +1,6 @@
 import Foundation
 
-public class CompanyContactsPagingInfo
+public class CompanyContactsPagingInfo: Codable
 {
     public init() {
     }

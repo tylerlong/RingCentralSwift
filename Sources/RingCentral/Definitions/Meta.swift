@@ -1,7 +1,7 @@
 import Foundation
 
 // resource metadata
-public class Meta
+public class Meta: Codable
 {
     public init() {
     }

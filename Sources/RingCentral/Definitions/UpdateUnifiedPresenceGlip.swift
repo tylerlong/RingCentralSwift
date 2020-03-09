@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateUnifiedPresenceGlip
+public class UpdateUnifiedPresenceGlip: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class PronouncedNamePromptInfo
+public class PronouncedNamePromptInfo: Codable
 {
     public init() {
     }

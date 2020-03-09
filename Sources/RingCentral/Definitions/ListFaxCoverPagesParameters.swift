@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListFaxCoverPagesParameters
+public class ListFaxCoverPagesParameters: Codable
 {
     public init() {
     }

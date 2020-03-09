@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallRecordingExtensionResource
+public class CallRecordingExtensionResource: Codable
 {
     public init() {
     }

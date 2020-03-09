@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipPatchTeamBody
+public class GlipPatchTeamBody: Codable
 {
     public init() {
     }

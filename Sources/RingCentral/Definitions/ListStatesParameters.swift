@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListStatesParameters
+public class ListStatesParameters: Codable
 {
     public init() {
     }

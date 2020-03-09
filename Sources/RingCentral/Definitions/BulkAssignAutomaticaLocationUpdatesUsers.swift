@@ -1,6 +1,6 @@
 import Foundation
 
-public class BulkAssignAutomaticaLocationUpdatesUsers
+public class BulkAssignAutomaticaLocationUpdatesUsers: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class TimeInterval
+public class TimeInterval: Codable
 {
     public init() {
     }

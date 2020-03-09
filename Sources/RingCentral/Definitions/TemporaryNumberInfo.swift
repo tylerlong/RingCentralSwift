@@ -1,6 +1,6 @@
 import Foundation
 
-public class TemporaryNumberInfo
+public class TemporaryNumberInfo: Codable
 {
     public init() {
     }

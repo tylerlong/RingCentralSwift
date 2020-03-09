@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserCallLogRecord
+public class UserCallLogRecord: Codable
 {
     public init() {
     }

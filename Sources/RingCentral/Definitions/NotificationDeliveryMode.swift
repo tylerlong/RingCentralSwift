@@ -1,6 +1,6 @@
 import Foundation
 
-public class NotificationDeliveryMode
+public class NotificationDeliveryMode: Codable
 {
     public init() {
     }

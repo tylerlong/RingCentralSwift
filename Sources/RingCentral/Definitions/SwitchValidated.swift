@@ -1,6 +1,6 @@
 import Foundation
 
-public class SwitchValidated
+public class SwitchValidated: Codable
 {
     public init() {
     }

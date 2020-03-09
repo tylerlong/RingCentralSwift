@@ -1,6 +1,6 @@
 import Foundation
 
-public class UpdateMessageRequest
+public class UpdateMessageRequest: Codable
 {
     public init() {
     }

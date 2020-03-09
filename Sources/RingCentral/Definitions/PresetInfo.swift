@@ -1,6 +1,6 @@
 import Foundation
 
-public class PresetInfo
+public class PresetInfo: Codable
 {
     public init() {
     }

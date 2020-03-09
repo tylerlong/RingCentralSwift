@@ -1,6 +1,6 @@
 import Foundation
 
-public class SiteResource
+public class SiteResource: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class PackageInfo
+public class PackageInfo: Codable
 {
     public init() {
     }

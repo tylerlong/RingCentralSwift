@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipPreferencesChats
+public class GlipPreferencesChats: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionCreationResponse
+public class ExtensionCreationResponse: Codable
 {
     public init() {
     }

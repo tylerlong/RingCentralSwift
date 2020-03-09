@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateIvrPromptRequest
+public class CreateIvrPromptRequest: Codable
 {
     public init() {
     }

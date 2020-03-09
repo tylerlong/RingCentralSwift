@@ -1,6 +1,6 @@
 import Foundation
 
-public class Email
+public class Email: Codable
 {
     public init() {
     }

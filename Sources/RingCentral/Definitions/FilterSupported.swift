@@ -1,6 +1,6 @@
 import Foundation
 
-public class FilterSupported
+public class FilterSupported: Codable
 {
     public init() {
     }

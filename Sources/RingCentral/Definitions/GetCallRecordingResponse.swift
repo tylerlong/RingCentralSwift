@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetCallRecordingResponse
+public class GetCallRecordingResponse: Codable
 {
     public init() {
     }

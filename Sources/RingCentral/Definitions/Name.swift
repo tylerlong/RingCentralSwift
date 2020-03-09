@@ -1,6 +1,6 @@
 import Foundation
 
-public class Name
+public class Name: Codable
 {
     public init() {
     }

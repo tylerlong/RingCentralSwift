@@ -1,6 +1,6 @@
 import Foundation
 
-public class SyncMessagesParameters
+public class SyncMessagesParameters: Codable
 {
     public init() {
     }

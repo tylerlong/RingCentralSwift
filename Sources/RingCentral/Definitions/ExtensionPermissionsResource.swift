@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionPermissionsResource
+public class ExtensionPermissionsResource: Codable
 {
     public init() {
     }

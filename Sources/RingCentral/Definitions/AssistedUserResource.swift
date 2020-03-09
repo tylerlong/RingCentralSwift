@@ -1,6 +1,6 @@
 import Foundation
 
-public class AssistedUserResource
+public class AssistedUserResource: Codable
 {
     public init() {
     }

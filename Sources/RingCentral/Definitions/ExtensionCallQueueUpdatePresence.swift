@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionCallQueueUpdatePresence
+public class ExtensionCallQueueUpdatePresence: Codable
 {
     public init() {
     }

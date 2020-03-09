@@ -1,6 +1,6 @@
 import Foundation
 
-public class LocationInfo
+public class LocationInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class GetExtensionGrantListResponse
+public class GetExtensionGrantListResponse: Codable
 {
     public init() {
     }

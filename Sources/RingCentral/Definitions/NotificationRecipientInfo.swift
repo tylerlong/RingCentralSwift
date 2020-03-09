@@ -1,6 +1,6 @@
 import Foundation
 
-public class NotificationRecipientInfo
+public class NotificationRecipientInfo: Codable
 {
     public init() {
     }

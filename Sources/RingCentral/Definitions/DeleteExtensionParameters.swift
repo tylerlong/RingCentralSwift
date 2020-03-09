@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeleteExtensionParameters
+public class DeleteExtensionParameters: Codable
 {
     public init() {
     }

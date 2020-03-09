@@ -1,6 +1,6 @@
 import Foundation
 
-public class PhoneNumberInfoNumberParser
+public class PhoneNumberInfoNumberParser: Codable
 {
     public init() {
     }

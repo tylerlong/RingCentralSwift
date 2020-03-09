@@ -1,7 +1,7 @@
 import Foundation
 
 // Information on the task for multiple switches creation
-public class CreateMultipleSwitchesResponse
+public class CreateMultipleSwitchesResponse: Codable
 {
     public init() {
     }

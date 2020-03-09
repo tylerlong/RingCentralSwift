@@ -1,6 +1,6 @@
 import Foundation
 
-public class CreateCallMonitoringGroupRequest
+public class CreateCallMonitoringGroupRequest: Codable
 {
     public init() {
     }

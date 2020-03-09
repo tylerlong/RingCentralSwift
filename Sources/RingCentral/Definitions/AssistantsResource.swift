@@ -1,6 +1,6 @@
 import Foundation
 
-public class AssistantsResource
+public class AssistantsResource: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class AccountDirectoryProfileImageResource
+public class AccountDirectoryProfileImageResource: Codable
 {
     public init() {
     }

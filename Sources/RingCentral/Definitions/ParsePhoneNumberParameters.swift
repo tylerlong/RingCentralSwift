@@ -1,6 +1,6 @@
 import Foundation
 
-public class ParsePhoneNumberParameters
+public class ParsePhoneNumberParameters: Codable
 {
     public init() {
     }

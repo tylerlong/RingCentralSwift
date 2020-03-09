@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserTemplates
+public class UserTemplates: Codable
 {
     public init() {
     }

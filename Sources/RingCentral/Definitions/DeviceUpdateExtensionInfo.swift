@@ -1,6 +1,6 @@
 import Foundation
 
-public class DeviceUpdateExtensionInfo
+public class DeviceUpdateExtensionInfo: Codable
 {
     public init() {
     }

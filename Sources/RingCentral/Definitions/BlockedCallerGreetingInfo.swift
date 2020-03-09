@@ -1,6 +1,6 @@
 import Foundation
 
-public class BlockedCallerGreetingInfo
+public class BlockedCallerGreetingInfo: Codable
 {
     public init() {
     }

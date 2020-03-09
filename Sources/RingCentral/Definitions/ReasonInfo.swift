@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReasonInfo
+public class ReasonInfo: Codable
 {
     public init() {
     }

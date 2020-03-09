@@ -1,6 +1,6 @@
 import Foundation
 
-public class LanguageList
+public class LanguageList: Codable
 {
     public init() {
     }

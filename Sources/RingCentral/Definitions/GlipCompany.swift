@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipCompany
+public class GlipCompany: Codable
 {
     public init() {
     }

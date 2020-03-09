@@ -1,6 +1,6 @@
 import Foundation
 
-public class PromptLanguageInfo
+public class PromptLanguageInfo: Codable
 {
     public init() {
     }

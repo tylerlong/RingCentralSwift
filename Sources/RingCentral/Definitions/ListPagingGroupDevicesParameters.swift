@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListPagingGroupDevicesParameters
+public class ListPagingGroupDevicesParameters: Codable
 {
     public init() {
     }

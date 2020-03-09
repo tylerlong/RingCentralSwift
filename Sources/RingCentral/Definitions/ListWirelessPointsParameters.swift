@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListWirelessPointsParameters
+public class ListWirelessPointsParameters: Codable
 {
     public init() {
     }

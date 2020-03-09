@@ -1,6 +1,6 @@
 import Foundation
 
-public class RevokeTokenRequest
+public class RevokeTokenRequest: Codable
 {
     public init() {
     }

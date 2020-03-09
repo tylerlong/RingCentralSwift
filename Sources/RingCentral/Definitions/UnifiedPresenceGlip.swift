@@ -1,7 +1,7 @@
 import Foundation
 
 // Returned if *Glip* feature is switched on
-public class UnifiedPresenceGlip
+public class UnifiedPresenceGlip: Codable
 {
     public init() {
     }

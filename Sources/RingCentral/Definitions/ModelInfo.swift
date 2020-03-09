@@ -1,6 +1,6 @@
 import Foundation
 
-public class ModelInfo
+public class ModelInfo: Codable
 {
     public init() {
     }

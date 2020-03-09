@@ -1,6 +1,6 @@
 import Foundation
 
-public class BulkAssignItem
+public class BulkAssignItem: Codable
 {
     public init() {
     }

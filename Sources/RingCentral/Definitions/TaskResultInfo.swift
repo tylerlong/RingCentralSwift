@@ -1,6 +1,6 @@
 import Foundation
 
-public class TaskResultInfo
+public class TaskResultInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class PauseResumeCallRecordingParameters
+public class PauseResumeCallRecordingParameters: Codable
 {
     public init() {
     }

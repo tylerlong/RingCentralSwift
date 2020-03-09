@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipPostTeamBody
+public class GlipPostTeamBody: Codable
 {
     public init() {
     }

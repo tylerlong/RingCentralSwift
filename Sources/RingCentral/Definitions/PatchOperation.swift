@@ -1,6 +1,6 @@
 import Foundation
 
-public class PatchOperation
+public class PatchOperation: Codable
 {
     public init() {
     }

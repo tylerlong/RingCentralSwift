@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallLogRecordLegInfo
+public class CallLogRecordLegInfo: Codable
 {
     public init() {
     }

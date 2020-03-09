@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadUserFeaturesParameters
+public class ReadUserFeaturesParameters: Codable
 {
     public init() {
     }

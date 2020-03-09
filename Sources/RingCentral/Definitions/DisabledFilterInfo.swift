@@ -1,6 +1,6 @@
 import Foundation
 
-public class DisabledFilterInfo
+public class DisabledFilterInfo: Codable
 {
     public init() {
     }

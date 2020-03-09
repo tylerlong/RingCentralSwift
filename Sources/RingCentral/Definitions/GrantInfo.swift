@@ -1,6 +1,6 @@
 import Foundation
 
-public class GrantInfo
+public class GrantInfo: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class ExtensionCountryInfoRequest
+public class ExtensionCountryInfoRequest: Codable
 {
     public init() {
     }

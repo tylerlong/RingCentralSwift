@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadConferencingSettingsParameters
+public class ReadConferencingSettingsParameters: Codable
 {
     public init() {
     }

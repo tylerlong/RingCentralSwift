@@ -1,6 +1,6 @@
 import Foundation
 
-public class BulkSupported
+public class BulkSupported: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class UserTransitionInfo
+public class UserTransitionInfo: Codable
 {
     public init() {
     }

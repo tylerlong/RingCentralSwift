@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipWebhookList
+public class GlipWebhookList: Codable
 {
     public init() {
     }

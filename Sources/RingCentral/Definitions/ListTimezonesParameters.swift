@@ -1,6 +1,6 @@
 import Foundation
 
-public class ListTimezonesParameters
+public class ListTimezonesParameters: Codable
 {
     public init() {
     }

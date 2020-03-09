@@ -1,6 +1,6 @@
 import Foundation
 
-public class ServiceProviderConfig
+public class ServiceProviderConfig: Codable
 {
     public init() {
     }

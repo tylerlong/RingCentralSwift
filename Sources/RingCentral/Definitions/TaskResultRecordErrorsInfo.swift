@@ -1,6 +1,6 @@
 import Foundation
 
-public class TaskResultRecordErrorsInfo
+public class TaskResultRecordErrorsInfo: Codable
 {
     public init() {
     }

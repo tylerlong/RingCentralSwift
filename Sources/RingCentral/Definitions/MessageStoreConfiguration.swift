@@ -1,6 +1,6 @@
 import Foundation
 
-public class MessageStoreConfiguration
+public class MessageStoreConfiguration: Codable
 {
     public init() {
     }

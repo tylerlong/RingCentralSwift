@@ -1,6 +1,6 @@
 import Foundation
 
-public class ReadUserPresenceStatusParameters
+public class ReadUserPresenceStatusParameters: Codable
 {
     public init() {
     }

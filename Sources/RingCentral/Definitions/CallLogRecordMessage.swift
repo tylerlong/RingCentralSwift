@@ -1,7 +1,7 @@
 import Foundation
 
 // Linked message (Fax/Voicemail)
-public class CallLogRecordMessage
+public class CallLogRecordMessage: Codable
 {
     public init() {
     }

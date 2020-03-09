@@ -1,6 +1,6 @@
 import Foundation
 
-public class StatusInfo
+public class StatusInfo: Codable
 {
     public init() {
     }

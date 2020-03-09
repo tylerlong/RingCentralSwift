@@ -1,6 +1,6 @@
 import Foundation
 
-public class ModifySubscriptionRequest
+public class ModifySubscriptionRequest: Codable
 {
     public init() {
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class GlipChatInfo
+public class GlipChatInfo: Codable
 {
     public init() {
     }

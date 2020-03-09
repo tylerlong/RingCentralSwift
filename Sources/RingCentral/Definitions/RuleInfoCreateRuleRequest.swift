@@ -1,6 +1,6 @@
 import Foundation
 
-public class RuleInfoCreateRuleRequest
+public class RuleInfoCreateRuleRequest: Codable
 {
     public init() {
     }

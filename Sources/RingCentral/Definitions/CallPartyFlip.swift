@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallPartyFlip
+public class CallPartyFlip: Codable
 {
     public init() {
     }

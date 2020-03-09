@@ -1,6 +1,6 @@
 import Foundation
 
-public class IgnoreRequestBody
+public class IgnoreRequestBody: Codable
 {
     public init() {
     }

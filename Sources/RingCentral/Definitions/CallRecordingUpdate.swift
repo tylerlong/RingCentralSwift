@@ -1,6 +1,6 @@
 import Foundation
 
-public class CallRecordingUpdate
+public class CallRecordingUpdate: Codable
 {
     public init() {
     }
