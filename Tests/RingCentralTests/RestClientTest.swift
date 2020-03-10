@@ -66,10 +66,34 @@ final class RestClientTests: XCTestCase {
         waitForExpectations(timeout: 10, handler: nil)
     }
 
+    func testAuthorizeFunc() {
+        let rc = RestClient(
+            clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
+            clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
+            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!)
+        let expectation = self.expectation(description: "testAuthorizeFunc")
+        let getTokenRequest = GetTokenRequest()
+        getTokenRequest.grant_type="password"
+        getTokenRequest.username = ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!
+        getTokenRequest.extension = ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!
+        getTokenRequest.password = ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
+        firstly {
+            rc.authorize(getTokenRequest: getTokenRequest)
+        }.done { r in
+            debugPrint(r)
+            expectation.fulfill()
+        }.catch { e in
+            debugPrint(e)
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
     static var allTests = [
         ("testUpdateSession", testUpdateSession),
         ("testServer", testServer),
         ("testNewURLRequest", testNewURLRequest),
+        ("testAuthorize", testAuthorize),
         ("testPromise", testPromise),
+        ("testAuthorizeFunc", testAuthorizeFunc),
     ]
 }
