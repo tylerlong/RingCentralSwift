@@ -41,14 +41,19 @@ public class RestClient {
         return urlRequest
     }
     
-    public func authorize(getTokenRequest: GetTokenRequest) -> Promise<String> {
+    public func authorize(getTokenRequest: GetTokenRequest) -> Promise<TokenInfo> {
         return Promise { seal in
             var urlRequest = newURLRequest(.post, "/restapi/oauth/token")
             urlRequest = try! URLEncodedFormParameterEncoder().encode(getTokenRequest, into: urlRequest)
             let dataRequest = self.session.request(urlRequest)
             dataRequest.responseString {response in
-                seal.resolve(response.value!, nil)
+                let tokenInfo = try! JSONDecoder().decode(TokenInfo.self, from: response.value!.data(using: .utf8)!)
+                seal.resolve(tokenInfo, nil)
             }
         }
     }
+    
+//    public func authorize(username: String, extension: String, password: String) {
+//
+//    }
 }

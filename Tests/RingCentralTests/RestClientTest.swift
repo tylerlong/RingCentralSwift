@@ -79,11 +79,12 @@ final class RestClientTests: XCTestCase {
         getTokenRequest.password = ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
         firstly {
             rc.authorize(getTokenRequest: getTokenRequest)
-        }.done { r in
-            debugPrint(r)
+        }.done { tokenInfo in
+            debugPrint(tokenInfo)
+        }.catch { error in
+            debugPrint(error)
+        }.finally {
             expectation.fulfill()
-        }.catch { e in
-            debugPrint(e)
         }
         waitForExpectations(timeout: 10, handler: nil)
     }
