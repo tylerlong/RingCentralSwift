@@ -41,15 +41,32 @@ public class RestClient {
         return urlRequest
     }
     
+    public func request(urlRequest: URLRequest) -> Promise<String> {
+        return Promise { seal in
+            let dataRequest = self.session.request(urlRequest)
+            dataRequest.validate(statusCode: 200..<300).responseString {response in
+                switch response.result {
+                case .success:
+                    seal.resolve(response.value, nil)
+                case .failure(let error):
+                    seal.resolve(nil, error)
+                }
+            }
+        }
+    }
+    
     public func authorize(getTokenRequest: GetTokenRequest) -> Promise<TokenInfo> {
         return Promise { seal in
             var urlRequest = newURLRequest(.post, "/restapi/oauth/token")
             urlRequest = try! URLEncodedFormParameterEncoder().encode(getTokenRequest, into: urlRequest)
-            let dataRequest = self.session.request(urlRequest)
-            dataRequest.responseString {response in
-                let tokenInfo = try! JSONDecoder().decode(TokenInfo.self, from: response.value!.data(using: .utf8)!)
+            firstly {
+                self.request(urlRequest: urlRequest)
+            }.done { str in
+                let tokenInfo = try! JSONDecoder().decode(TokenInfo.self, from: str.data(using: .utf8)!)
                 self.token = tokenInfo
                 seal.resolve(tokenInfo, nil)
+            }.catch { error in
+                debugPrint(error)
             }
         }
     }
@@ -76,5 +93,22 @@ public class RestClient {
         getTokenRequest.grant_type = "refresh_token"
         getTokenRequest.refresh_token = refreshToken ?? self.token?.refresh_token
         return authorize(getTokenRequest: getTokenRequest)
+    }
+    
+    public func revoke(tokenToRevoke: String? = nil) -> Promise<String> {
+        return Promise { seal in
+            var urlRequest = newURLRequest(.post, "/restapi/oauth/revoke")
+            let revokeTokenRequest = RevokeTokenRequest()
+            revokeTokenRequest.token = tokenToRevoke ?? self.token?.access_token ?? self.token?.refresh_token
+            urlRequest = try! URLEncodedFormParameterEncoder().encode(revokeTokenRequest, into: urlRequest)
+            firstly {
+                self.request(urlRequest: urlRequest)
+            }.done { str in
+                self.token = nil
+                seal.resolve(str, nil)
+            }.catch { error in
+                seal.resolve(nil, error)
+            }
+        }
     }
 }
