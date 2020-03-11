@@ -119,6 +119,32 @@ final class RestClientTests: XCTestCase {
         waitForExpectations(timeout: 10, handler: nil)
     }
     
+    func testRefresh() {
+        let rc = RestClient(
+            clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
+            clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
+            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
+        )
+        let expectation = self.expectation(description: "testAuthorizeFunc2")
+        firstly {
+            rc.authorize(
+                username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
+                extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
+                password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
+            )
+        }.then { tokenInfo in
+            rc.refresh()
+        }.done { tokenInfo in
+            debugPrint(tokenInfo)
+            XCTAssertTrue(tokenInfo.access_token!.count > 0, "No access token")
+        }.catch { error in
+            debugPrint(error)
+        }.finally {
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
     static var allTests = [
         ("testUpdateSession", testUpdateSession),
         ("testServer", testServer),
@@ -127,5 +153,6 @@ final class RestClientTests: XCTestCase {
         ("testPromise", testPromise),
         ("testAuthorizeFunc", testAuthorizeFunc),
         ("testAuthorizeFunc2", testAuthorizeFunc2),
+        ("testRefresh", testRefresh),
     ]
 }

@@ -48,6 +48,7 @@ public class RestClient {
             let dataRequest = self.session.request(urlRequest)
             dataRequest.responseString {response in
                 let tokenInfo = try! JSONDecoder().decode(TokenInfo.self, from: response.value!.data(using: .utf8)!)
+                self.token = tokenInfo
                 seal.resolve(tokenInfo, nil)
             }
         }
@@ -59,6 +60,21 @@ public class RestClient {
         getTokenRequest.username = username
         getTokenRequest.extension = `extension`
         getTokenRequest.password = password
+        return authorize(getTokenRequest: getTokenRequest)
+    }
+    
+    public func authorize(authCode: String, redirectUri: String) -> Promise<TokenInfo> {
+        let getTokenRequest = GetTokenRequest()
+        getTokenRequest.grant_type = "authorization_code"
+        getTokenRequest.code = authCode
+        getTokenRequest.redirect_uri = redirectUri
+        return authorize(getTokenRequest: getTokenRequest)
+    }
+    
+    public func refresh(refreshToken: String? = nil) -> Promise<TokenInfo> {
+        let getTokenRequest = GetTokenRequest()
+        getTokenRequest.grant_type = "refresh_token"
+        getTokenRequest.refresh_token = refreshToken ?? self.token?.refresh_token
         return authorize(getTokenRequest: getTokenRequest)
     }
 }
