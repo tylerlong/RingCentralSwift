@@ -53,7 +53,12 @@ public class RestClient {
         }
     }
     
-//    public func authorize(username: String, extension: String, password: String) {
-//
-//    }
+    public func authorize(username: String, extension: String, password: String) -> Promise<TokenInfo> {
+        let getTokenRequest = GetTokenRequest()
+        getTokenRequest.grant_type = "password"
+        getTokenRequest.username = username
+        getTokenRequest.extension = `extension`
+        getTokenRequest.password = password
+        return authorize(getTokenRequest: getTokenRequest)
+    }
 }

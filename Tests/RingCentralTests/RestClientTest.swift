@@ -19,15 +19,18 @@ final class RestClientTests: XCTestCase {
     
     func testNewURLRequest() {
         let rc = RestClient(clientId: "", clientSecret: "")
+        rc.token = TokenInfo()
+        rc.token!.access_token = "fake token"
         let urlRequest = rc.newURLRequest(.get, "/restapi/v1.0/account/~/extension/~")
         XCTAssertEqual(urlRequest.headers.value(for: "X-User-Agent"), "Unknown/0.0.1 RingCentral-Swift/0.1.0")
     }
     
-    func testAuthorize() {
+    func testLowLevelAuthorize() {
         let rc = RestClient(
             clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
             clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
-            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!)
+            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
+        )
         var urlRequest = rc.newURLRequest(.post, "/restapi/oauth/token")
         urlRequest = try! URLEncodedFormParameterEncoder().encode([
             "grant_type": "password",
@@ -36,7 +39,7 @@ final class RestClientTests: XCTestCase {
             "password": ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!,
         ], into: urlRequest)
         let dataRequest = rc.session.request(urlRequest)
-        let expectation = self.expectation(description: "testAuthorize")
+        let expectation = self.expectation(description: "testLowLevelAuthorize")
         dataRequest.responseString {response in
             debugPrint(response)
             expectation.fulfill()
@@ -48,7 +51,8 @@ final class RestClientTests: XCTestCase {
         let rc = RestClient(
             clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
             clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
-            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!)
+            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
+        )
         let getTokenRequest = GetTokenRequest()
         getTokenRequest.grant_type = "password"
         getTokenRequest.username = ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!
@@ -70,7 +74,8 @@ final class RestClientTests: XCTestCase {
         let rc = RestClient(
             clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
             clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
-            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!)
+            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
+        )
         let expectation = self.expectation(description: "testAuthorizeFunc")
         let getTokenRequest = GetTokenRequest()
         getTokenRequest.grant_type="password"
@@ -81,6 +86,31 @@ final class RestClientTests: XCTestCase {
             rc.authorize(getTokenRequest: getTokenRequest)
         }.done { tokenInfo in
             debugPrint(tokenInfo)
+            XCTAssertTrue(tokenInfo.access_token!.count > 0, "No access token")
+        }.catch { error in
+            debugPrint(error)
+        }.finally {
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+    func testAuthorizeFunc2() {
+        let rc = RestClient(
+            clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
+            clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
+            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
+        )
+        let expectation = self.expectation(description: "testAuthorizeFunc2")
+        firstly {
+            rc.authorize(
+                username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
+                extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
+                password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
+            )
+        }.done { tokenInfo in
+            debugPrint(tokenInfo)
+            XCTAssertTrue(tokenInfo.access_token!.count > 0, "No access token")
         }.catch { error in
             debugPrint(error)
         }.finally {
@@ -93,8 +123,9 @@ final class RestClientTests: XCTestCase {
         ("testUpdateSession", testUpdateSession),
         ("testServer", testServer),
         ("testNewURLRequest", testNewURLRequest),
-        ("testAuthorize", testAuthorize),
+        ("testLowLevelAuthorize", testLowLevelAuthorize),
         ("testPromise", testPromise),
         ("testAuthorizeFunc", testAuthorizeFunc),
+        ("testAuthorizeFunc2", testAuthorizeFunc2),
     ]
 }
