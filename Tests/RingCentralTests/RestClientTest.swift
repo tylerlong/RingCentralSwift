@@ -145,6 +145,35 @@ final class RestClientTests: XCTestCase {
         waitForExpectations(timeout: 10, handler: nil)
     }
     
+    func testRevoke() {
+        
+    }
+    
+    func test404() {
+        let rc = RestClient(
+            clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
+            clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
+            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
+        )
+        rc.token = TokenInfo()
+        rc.token?.access_token = "fake token"
+        let urlRequest = rc.newURLRequest(.get, "/restapi/v1.0/does-not-exist")
+        let expectation = self.expectation(description: "test404")
+        var count = 0
+        firstly{
+            rc.request(urlRequest: urlRequest)
+        }.done { str in
+            debugPrint(str)
+        }.catch { error in
+            debugPrint(error)
+            count += 1
+        }.finally {
+            XCTAssertTrue(count == 1, "No error")
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
     static var allTests = [
         ("testUpdateSession", testUpdateSession),
         ("testServer", testServer),
@@ -154,5 +183,7 @@ final class RestClientTests: XCTestCase {
         ("testAuthorizeFunc", testAuthorizeFunc),
         ("testAuthorizeFunc2", testAuthorizeFunc2),
         ("testRefresh", testRefresh),
+        ("test404", test404),
+        ("testRevoke", testRevoke),
     ]
 }
