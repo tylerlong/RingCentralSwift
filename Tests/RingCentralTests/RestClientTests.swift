@@ -102,13 +102,12 @@ final class RestClientTests: XCTestCase {
             server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
         )
         let expectation = self.expectation(description: "testAuthorizeFunc2")
-        firstly {
-            rc.authorize(
-                username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
-                extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
-                password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
-            )
-        }.done { tokenInfo in
+
+        rc.authorize(
+            username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
+            extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
+            password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
+        ).done { tokenInfo in
             debugPrint(tokenInfo)
             XCTAssertTrue(tokenInfo.access_token!.count > 0, "No access token")
         }.catch { error in
