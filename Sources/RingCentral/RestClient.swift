@@ -49,6 +49,9 @@ public class RestClient {
                 case .success:
                     seal.resolve(response.value, nil)
                 case .failure(let error):
+                    if(error.asAFError?.isResponseSerializationError ?? false) {
+                        seal.resolve("", nil) // empty http response
+                    }
                     seal.resolve(nil, error)
                 }
             }
@@ -66,7 +69,7 @@ public class RestClient {
                 self.token = tokenInfo
                 seal.resolve(tokenInfo, nil)
             }.catch { error in
-                debugPrint(error)
+                seal.resolve(nil, error)
             }
         }
     }

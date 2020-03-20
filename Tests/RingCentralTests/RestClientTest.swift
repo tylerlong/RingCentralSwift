@@ -146,7 +146,29 @@ final class RestClientTests: XCTestCase {
     }
     
     func testRevoke() {
-        
+        let rc = RestClient(
+           clientId: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_ID"]!,
+           clientSecret: ProcessInfo.processInfo.environment["RINGCENTRAL_CLIENT_SECRET"]!,
+           server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
+       )
+       let expectation = self.expectation(description: "testRevoke")
+       firstly {
+           rc.authorize(
+               username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
+               extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
+               password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
+           )
+       }.done{ tokenInfo in
+            XCTAssertTrue(rc.token != nil, "authorize failed")
+       }.then { tokenInfo in
+            rc.revoke()
+       }.catch { error in
+           debugPrint(error)
+       }.finally {
+           XCTAssertTrue(rc.token == nil, "revoke failed")
+           expectation.fulfill()
+       }
+       waitForExpectations(timeout: 10, handler: nil)
     }
     
     func test404() {
