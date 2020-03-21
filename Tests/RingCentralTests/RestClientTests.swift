@@ -59,9 +59,7 @@ final class RestClientTests: XCTestCase {
         getTokenRequest.extension = ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!
         getTokenRequest.password = ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
         let expectation = self.expectation(description: "testPromise")
-        firstly {
-            rc.authorize(getTokenRequest: getTokenRequest)
-        }.done { response in
+        rc.authorize(getTokenRequest: getTokenRequest).done { response in
             print(response)
             expectation.fulfill()
         }.catch { error in
@@ -82,9 +80,7 @@ final class RestClientTests: XCTestCase {
         getTokenRequest.username = ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!
         getTokenRequest.extension = ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!
         getTokenRequest.password = ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
-        firstly {
-            rc.authorize(getTokenRequest: getTokenRequest)
-        }.done { tokenInfo in
+        rc.authorize(getTokenRequest: getTokenRequest).done { tokenInfo in
             debugPrint(tokenInfo)
             XCTAssertTrue(tokenInfo.access_token!.count > 0, "No access token")
         }.catch { error in
@@ -102,7 +98,6 @@ final class RestClientTests: XCTestCase {
             server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
         )
         let expectation = self.expectation(description: "testAuthorizeFunc2")
-
         rc.authorize(
             username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
             extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
@@ -125,13 +120,11 @@ final class RestClientTests: XCTestCase {
             server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
         )
         let expectation = self.expectation(description: "testAuthorizeFunc2")
-        firstly {
-            rc.authorize(
-                username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
-                extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
-                password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
-            )
-        }.then { tokenInfo in
+        rc.authorize(
+            username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
+            extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
+            password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
+        ).then { tokenInfo in
             rc.refresh()
         }.done { tokenInfo in
             debugPrint(tokenInfo)
@@ -151,13 +144,11 @@ final class RestClientTests: XCTestCase {
            server: ProcessInfo.processInfo.environment["RINGCENTRAL_SERVER_URL"]!
        )
        let expectation = self.expectation(description: "testRevoke")
-       firstly {
-           rc.authorize(
-               username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
-               extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
-               password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
-           )
-       }.done{ tokenInfo in
+       rc.authorize(
+           username: ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!,
+           extension: ProcessInfo.processInfo.environment["RINGCENTRAL_EXTENSION"]!,
+           password: ProcessInfo.processInfo.environment["RINGCENTRAL_PASSWORD"]!
+       ).done{ tokenInfo in
             XCTAssertTrue(rc.token != nil, "authorize failed")
        }.then { tokenInfo in
             rc.revoke()
@@ -181,9 +172,7 @@ final class RestClientTests: XCTestCase {
         let urlRequest = rc.newURLRequest(.get, "/restapi/v1.0/does-not-exist")
         let expectation = self.expectation(description: "test404")
         var count = 0
-        firstly{
-            rc.request(urlRequest: urlRequest)
-        }.done { str in
+        rc.request(urlRequest: urlRequest).done { str in
             debugPrint(str)
         }.catch { error in
             debugPrint(error)

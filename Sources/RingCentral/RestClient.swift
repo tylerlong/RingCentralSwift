@@ -62,9 +62,7 @@ public class RestClient {
         return Promise { seal in
             var urlRequest = newURLRequest(.post, "/restapi/oauth/token")
             urlRequest = try! URLEncodedFormParameterEncoder().encode(getTokenRequest, into: urlRequest)
-            firstly {
-                self.request(urlRequest: urlRequest)
-            }.done { str in
+            self.request(urlRequest: urlRequest).done { str in
                 let tokenInfo = try! JSONDecoder().decode(TokenInfo.self, from: str.data(using: .utf8)!)
                 self.token = tokenInfo
                 seal.resolve(tokenInfo, nil)
@@ -104,9 +102,7 @@ public class RestClient {
             let revokeTokenRequest = RevokeTokenRequest()
             revokeTokenRequest.token = tokenToRevoke ?? self.token?.access_token ?? self.token?.refresh_token
             urlRequest = try! URLEncodedFormParameterEncoder().encode(revokeTokenRequest, into: urlRequest)
-            firstly {
-                self.request(urlRequest: urlRequest)
-            }.done { str in
+            self.request(urlRequest: urlRequest).done { str in
                 self.token = nil
                 seal.resolve(str, nil)
             }.catch { error in
