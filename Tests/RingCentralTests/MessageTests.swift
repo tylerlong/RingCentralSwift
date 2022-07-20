@@ -22,7 +22,7 @@ final class MessageTests: XCTestCase {
             createSMSMessage.from = MessageStoreCallerInfoRequest()
             createSMSMessage.from!.phoneNumber = ProcessInfo.processInfo.environment["RINGCENTRAL_USERNAME"]!
             createSMSMessage.to = [MessageStoreCallerInfoRequest()]
-            createSMSMessage.to![0].phoneNumber = "6504306662"
+            createSMSMessage.to![0].phoneNumber = "6504388888"
             urlRequest = try! JSONParameterEncoder().encode(createSMSMessage, into: urlRequest)
             rc.request(urlRequest: urlRequest).done { str in
                 debugPrint(str)
